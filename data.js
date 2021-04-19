@@ -149,3 +149,6 @@ export const cubbies = {
 
 };
     
+export const puzzles = [
+    cubbies
+];

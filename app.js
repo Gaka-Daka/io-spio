@@ -1,5 +1,11 @@
-// import functions and grab DOM elements
+const newButton = document.getElementById('new-user');
+const loginButton = document.getElementById('login');
 
-// initialize state
 
-// set event listeners to update state and DOM
+newButton.addEventListener('click', () => {
+    window.location = '../signup/index.html';
+});
+
+loginButton.addEventListener('click', () => {
+    window.location = '../login/index.html';
+});

@@ -1,5 +1,5 @@
-const USER = 'USER'
-const LOGGED_IN = 'LOGGED_IN'
+const USER = 'USER';
+const LOGGED_IN = 'LOGGED_IN';
 
 export function createUser(username, password) {
     const user = {
@@ -21,16 +21,15 @@ export function updateUser(user) {
 export function getUser() {
     const stringyUser = localStorage.getItem(USER);
     const parsedUser = JSON.parse(stringyUser);
-
+   
     return parsedUser;
 }
 
 export function userExists(username) {
     const storedUser = getUser();
-
-    if (username === storedUser.username) {
-        return true;
-    } return false;
+    if (!storedUser) return false;
+    
+    return username === storedUser.username;
 }
 
 export function correctLogin(username, password) {

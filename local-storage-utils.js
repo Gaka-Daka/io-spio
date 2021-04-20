@@ -3,10 +3,8 @@ const LOGGED_IN = 'LOGGED_IN';
 
 export function createUser(username, password) {
     const user = {
-        username, 
+        username,
         password,
-        misclicks: 0,
-        foundObjects: [],
     };
 
     updateUser(user);
@@ -21,14 +19,14 @@ export function updateUser(user) {
 export function getUser() {
     const stringyUser = localStorage.getItem(USER);
     const parsedUser = JSON.parse(stringyUser);
-   
+
     return parsedUser;
 }
 
 export function userExists(username) {
     const storedUser = getUser();
     if (!storedUser) return false;
-    
+
     return username === storedUser.username;
 }
 
@@ -41,12 +39,12 @@ export function correctLogin(username, password) {
 }
 
 export function logIn(username) {
-    
+
     localStorage.setItem(LOGGED_IN, username);
 }
 
 export function logOut() {
-    
+
     localStorage.setItem(LOGGED_IN, '');
 }
 

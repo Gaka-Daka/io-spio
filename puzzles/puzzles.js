@@ -1,8 +1,11 @@
 import { findById } from '../utils.js';
 import { puzzles } from '../data.js';
-import { pointTotal } from '../results/results.js';
-import { updateGame, createGame } from '../game-utils.js';
 
+import { updateGame, createGame } from '../game-utils.js';
+function pointTotal(game, correctClicks) {
+    let score = (correctClicks * 100) - (game.misclicks * 10);
+    return score;
+}
 
 //sourced from: https://jsfiddle.net/wr1ua0db/17/
 let duration = 20;
@@ -46,6 +49,7 @@ const puzzleId = params.get('id');
 const puzzle = findById(puzzles, puzzleId);
 
 const game = createGame();
+
 
 const elTitle = document.querySelector('#puzzle-title');
 const elPuzzle = document.querySelector('#puzzle');

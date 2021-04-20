@@ -6,7 +6,7 @@ export function createGame() {
         foundObjects: [],
         points: 0
     };
-
+    // updateGame(game);
     return game;
 }
 

@@ -4,8 +4,10 @@ import { getUser, updateUser } from '../local-storage-utils.js';
 import { getGame, updateGame, createGame } from '../game-utils.js';
 
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+let duration = 20;
+const display = document.querySelector('#time');
+
+var timer = duration, minutes, seconds;
   
     var myInterval = setInterval(function() {
         minutes = parseInt(timer / 60, 10);
@@ -21,16 +23,40 @@ function startTimer(duration, display) {
             doneFunction();
         }
     }, 1000);
-}
+
+
+// function startTimer(duration, display) {
+//     var timer = duration, minutes, seconds;
   
-window.onload = function() {
-    //time in seconds
-    var time = 300, display = document.querySelector('#time');
-    startTimer(time, display);
-};
+//     var myInterval = setInterval(function() {
+//         minutes = parseInt(timer / 60, 10);
+//         seconds = parseInt(timer % 60, 10);
+  
+//         minutes = minutes < 10 ? '0' + minutes : minutes;
+//         seconds = seconds < 10 ? '0' + seconds : seconds;
+  
+//         display.textContent = minutes + ':' + seconds;
+  
+//         if (--timer < 0) {
+//             clearInterval(myInterval);
+//             doneFunction();
+//         }
+//     }, 1000);
+// }
+  
+// window.onload = function() {
+//     //time in seconds
+//     var time = 20, display = document.querySelector('#time');
+//     startTimer(time, display);
+// };
   
 function doneFunction(){
     console.log('done !');
+
+    const endGameSpan = document.createElement('span');
+    elPuzzle.append(endGameSpan);
+    
+    updateGame(game);  
 }
 // setTimeout(function(){ alert("Hello"); }, 3000);
 //sourced from: https://jsfiddle.net/wr1ua0db/17/
@@ -72,7 +98,7 @@ puzzle.hiddenObjects.forEach(object => {
         matchingIds.hasBeenFound = true;
         clickyClue.style.textDecoration = 'line-through';
         
-        
+        allClickiesFound();
     });
 
     elPuzzle.append(clicky);
@@ -82,16 +108,21 @@ puzzle.hiddenObjects.forEach(object => {
 
 image.addEventListener('click', () => {
     game.misclicks++;
-    
+    console.log(game.misclicks);
 });
 
-
-
-
-
-
-
 elPuzzle.append(image);
+
+//function to cause push of misclicks after timer runs out or all items found
+
+// function allClickiesFound() {
+    
+//     if (game.foundObjects.hasBeenFound.every(true)) return doneFunction();
+//        clearInterval(myInterval);
+//    };
+
+
+
 
 
 

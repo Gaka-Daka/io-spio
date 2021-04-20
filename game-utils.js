@@ -4,6 +4,7 @@ export function createGame() {
     const game = {
         misclicks: 0,
         foundObjects: [],
+        points: 0
     };
 
     return game;

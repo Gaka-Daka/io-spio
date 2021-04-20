@@ -1,19 +1,17 @@
-
-
 export const cubbies = {
 
     id: 'cubbies',
     title: 'Cubbies',
-    image: '',
+    image: '../assets/cubbies.jpg',
 
     hiddenObjects: [
         {
             id: 'lamb',
             clue: 'a lamb',
-            image: '',
+            image: '../assets/lamb.png',
             map: {
-                top: '',
-                left: ''
+                top: '50%',
+                left: '50%'
             }
 
             // dimensions: {
@@ -143,12 +141,12 @@ export const cubbies = {
 
 
         },
-        
+
     ],
-    
+
 
 };
-    
+
 export const puzzles = [
     cubbies
 ];

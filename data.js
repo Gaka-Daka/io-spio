@@ -7,7 +7,7 @@ export const cubbies = {
     hiddenObjects: [
         {
             id: 'lamb',
-            clue: 'a lamb',
+            clue: 'a lamb,',
             image: '../assets/lamb.png',
             map: {
                 top: '50%',
@@ -15,8 +15,8 @@ export const cubbies = {
             }
 
             // dimensions: {
-            //     width: '',
-            //     height: '',
+            //     width: '200',
+            //     height: '200',
             //     borderRadius: ''
             // }
 
@@ -41,7 +41,7 @@ export const cubbies = {
         },
         {
             id: 'pencil',
-            clue: 'a bright yellow pencil',
+            clue: 'a bright yellow pencil,',
             image: '',
             map: {
                 top: '',
@@ -58,7 +58,7 @@ export const cubbies = {
         },
         {
             id: 'arrows',
-            clue: 'two black arrows',
+            clue: 'two black arrows,',
             image: '',
             map: {
                 top: '',
@@ -75,7 +75,7 @@ export const cubbies = {
         },
         {
             id: 'puppy',
-            clue: 'a little puppy dog',
+            clue: 'a little puppy dog,',
             image: '',
             map: {
                 top: '',

@@ -8,6 +8,7 @@ export const cubbies = {
         {
             id: 'lamb',
             clue: 'a lamb,',
+            description: 'a lamb',
             image: '../assets/lamb.png',
             map: {
                 top: '50%',
@@ -24,7 +25,8 @@ export const cubbies = {
         },
         {
             id: 'jack',
-            clue: 'a small silver jack',
+            clue: 'a small silver jack,',
+            description: 'a small silver jack',
             image: '',
             map: {
                 top: '',
@@ -42,6 +44,7 @@ export const cubbies = {
         {
             id: 'pencil',
             clue: 'a bright yellow pencil,',
+            description: 'a bright yellow pencil',
             image: '',
             map: {
                 top: '',
@@ -59,6 +62,7 @@ export const cubbies = {
         {
             id: 'arrows',
             clue: 'two black arrows,',
+            description: 'two black arrows',
             image: '',
             map: {
                 top: '',
@@ -76,6 +80,7 @@ export const cubbies = {
         {
             id: 'puppy',
             clue: 'a little puppy dog,',
+            description: 'a little puppy dog',
             image: '',
             map: {
                 top: '',
@@ -93,6 +98,7 @@ export const cubbies = {
         {
             id: 'ladybug',
             clue: 'a red ladybug',
+            description: 'a red ladybug',
             image: '',
             map: {
                 top: '',
@@ -110,6 +116,7 @@ export const cubbies = {
         {
             id: 'rug',
             clue: 'a Persian rug',
+            description: 'a Persian rug',
             image: '',
             map: {
                 top: '',
@@ -127,6 +134,7 @@ export const cubbies = {
         {
             id: 'icecream',
             clue: 'an ice cream cone',
+            description: 'an ice cream cone',
             image: '',
             map: {
                 top: '',

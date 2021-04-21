@@ -153,3 +153,7 @@ footer {
     filter: drop-shadow(5px 5px 5px hsl(180, 50%, 50%));
     opacity: 1;
 }
+
+.last-score{
+    font-weight: bold;
+}

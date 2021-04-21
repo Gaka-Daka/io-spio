@@ -13,15 +13,17 @@ const game = getGame();
 
 
 user.games.push(game);
-console.log(user);
 
-updateUser(user);
 
-//^^
+
+const button = document.querySelector('#play-again');
+console.log(button);
 const foundTable = document.querySelector('#found-table');
 const scoreBoard = document.querySelector('#scoreboard');
-console.log(scoreBoard);
-const hiddenObjects = puzzles[0].hiddenObjects;
+
+const currentPuzzle = findById(puzzles, game.puzzle);
+
+const hiddenObjects = currentPuzzle.hiddenObjects;
 
 
 for (let gameItem of game.foundObjects) {
@@ -53,6 +55,7 @@ function addTableRow(matchingItem) {
 }
 function addResultTableRow(user, game) {
     const tr = document.createElement('tr');
+    tr.classList.add('scores');
     const tdUser = document.createElement('td');
     tdUser.textContent = user.username;
 
@@ -68,7 +71,7 @@ function addResultTableRow(user, game) {
 
     
 
-    tr.append(tdUser, tdPuzzle, tdDifficulty ,tdScore);
+    tr.append(tdUser, tdPuzzle, tdDifficulty, tdScore);
     
     return tr;
 }
@@ -79,3 +82,13 @@ for (let game of user.games){
 }
 
 
+updateUser(user);
+
+//a really round about way of find and adding a bold style to the most recent score.
+const allScores = document.querySelectorAll('.scores');
+const mostRecentScore = allScores[allScores.length - 1];
+mostRecentScore.classList.add('last-score');
+button.addEventListener('click', () => {
+    localStorage.removeItem('GAME');
+    window.location = '../game-config/index.html';
+});

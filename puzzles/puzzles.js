@@ -129,6 +129,7 @@ puzzle.hiddenObjects.forEach(object => {
         score = pointTotal(game, correctClicks);
         currentScore.textContent = score;
         clicky.classList.add('disabled');
+        clickyImg.classList.add('drop-shadow');
         if (allClickiesFound()) doneFunction();
 
     });

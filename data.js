@@ -2,14 +2,14 @@ const cubbies = {
 
     id: 'cubbies',
     title: 'Cubbies',
-    image: '../assets/cubbies.jpg',
+    image: '../assets/cubbies/cubbies.jpg',
 
     hiddenObjects: [
         {
             id: 'lamb',
             clue: 'a lamb,',
             description: 'a lamb',
-            image: '../assets/lamb.png',
+            image: '../assets/cubbies/lamb.png',
             map: {
                 top: '9.5%',
                 left: '43%'
@@ -27,7 +27,7 @@ const cubbies = {
             id: 'jack',
             clue: 'a small silver jack,',
             description: 'a small silver jack',
-            image: '../assets/jack.png',
+            image: '../assets/cubbies/jack.png',
             map: {
                 top: '60%',
                 left: '12.7%'
@@ -45,7 +45,7 @@ const cubbies = {
             id: 'pencil',
             clue: 'a bright yellow pencil,',
             description: 'a bright yellow pencil',
-            image: '../assets/pencil.png',
+            image: '../assets/cubbies/pencil.png',
             map: {
                 top: '5.6%',
                 left: '66.3%'
@@ -63,7 +63,7 @@ const cubbies = {
             id: 'arrows',
             clue: 'two black arrows,',
             description: 'two black arrows',
-            image: '../assets/arrows.png',
+            image: '../assets/cubbies/arrows.png',
             map: {
                 top: '65.2%',
                 left: '7.6%'
@@ -81,7 +81,7 @@ const cubbies = {
             id: 'puppy',
             clue: 'a little puppy dog,',
             description: 'a little puppy dog',
-            image: '../assets/puppy.png',
+            image: '../assets/cubbies/puppy.png',
             map: {
                 top: '65%',
                 left: '44%'
@@ -99,7 +99,7 @@ const cubbies = {
             id: 'ladybug',
             clue: 'a red ladybug',
             description: 'a red ladybug',
-            image: '../assets/ladybug.png',
+            image: '../assets/cubbies/ladybug.png',
             map: {
                 top: '45.5%',
                 left: '55%'
@@ -117,7 +117,7 @@ const cubbies = {
             id: 'rug',
             clue: 'a Persian rug',
             description: 'a Persian rug',
-            image: '../assets/rug.png',
+            image: '../assets/cubbies/rug.png',
             map: {
                 top: '93%',
                 left: '84%'
@@ -135,7 +135,7 @@ const cubbies = {
             id: 'icecream',
             clue: 'an ice cream cone',
             description: 'an ice cream cone',
-            image: '../assets/icecream.png',
+            image: '../assets/cubbies/icecream.png',
             map: {
                 top: '32%',
                 left: '78%'

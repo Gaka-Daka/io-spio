@@ -32,7 +32,7 @@ let myInterval = setInterval(function () { //eslint-disable-line
 
     if (--timer < 0) {
         doneFunction();
-  
+
     }
 }, 1000);
 //sourced from: https://jsfiddle.net/wr1ua0db/17/
@@ -42,7 +42,7 @@ function doneFunction() {
     const moveOn = document.createElement('button');
     moveOn.textContent = 'Go to Results';
 
-    const clickies = document.querySelectorAll('.clicky')
+    const clickies = document.querySelectorAll('.clicky');
     for (let clicky of clickies) {
         clicky.classList.add('disabled');
     }
@@ -78,6 +78,7 @@ let score = pointTotal(game, correctClicks);
 elTitle.textContent = puzzle.title;
 
 const image = document.createElement('img');
+image.classList.add('puzzle-map');
 image.src = puzzle.image;
 image.style.width = '1000px';
 
@@ -93,14 +94,19 @@ puzzle.hiddenObjects.forEach(object => {
     clues.append(clickyClue);
 
     const clicky = document.createElement('div');
-    //change textContent to image
-    clicky.textContent = object.id;
+    const clickyImg = document.createElement('img');
+
+    clicky.img = object.img;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
-    clicky.classList.add("clicky");
+
+    clicky.classList.add('clicky');
+
+    
     if (game.difficulty === 'baby') {
         clicky.classList.add('baby');
     }
+
 
     clicky.addEventListener('click', () => {
         const matchingIds = findById(game.foundObjects, object.id);
@@ -114,7 +120,7 @@ puzzle.hiddenObjects.forEach(object => {
 
     });
 
-    elPuzzle.append(clicky);
+    elPuzzle.append(clicky, clickyImg);
     scoreBox.append(currentScore, mistakes);
 
 });

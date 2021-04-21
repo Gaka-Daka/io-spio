@@ -2,14 +2,14 @@ const cubbies = {
 
     id: 'cubbies',
     title: 'Cubbies',
-    image: '../assets/cubbies.jpg',
+    image: '../assets/cubbies/cubbies.jpg',
 
     hiddenObjects: [
         {
             id: 'lamb',
             clue: 'a lamb,',
             description: 'a lamb',
-            image: '../assets/lamb.png',
+            image: '../assets/cubbies/lamb.png',
             map: {
                 top: '9.5%',
                 left: '43%'
@@ -27,7 +27,7 @@ const cubbies = {
             id: 'jack',
             clue: 'a small silver jack,',
             description: 'a small silver jack',
-            image: '../assets/jack.png',
+            image: '../assets/cubbies/jack.png',
             map: {
                 top: '60%',
                 left: '12.7%'
@@ -45,7 +45,7 @@ const cubbies = {
             id: 'pencil',
             clue: 'a bright yellow pencil,',
             description: 'a bright yellow pencil',
-            image: '../assets/pencil.png',
+            image: '../assets/cubbies/pencil.png',
             map: {
                 top: '5.6%',
                 left: '66.3%'
@@ -63,7 +63,7 @@ const cubbies = {
             id: 'arrows',
             clue: 'two black arrows,',
             description: 'two black arrows',
-            image: '../assets/arrows.png',
+            image: '../assets/cubbies/arrows.png',
             map: {
                 top: '65.2%',
                 left: '7.6%'
@@ -81,7 +81,7 @@ const cubbies = {
             id: 'puppy',
             clue: 'a little puppy dog,',
             description: 'a little puppy dog',
-            image: '../assets/puppy.png',
+            image: '../assets/cubbies/puppy.png',
             map: {
                 top: '65%',
                 left: '44%'
@@ -99,7 +99,7 @@ const cubbies = {
             id: 'ladybug',
             clue: 'a red ladybug',
             description: 'a red ladybug',
-            image: '../assets/ladybug.png',
+            image: '../assets/cubbies/ladybug.png',
             map: {
                 top: '45.5%',
                 left: '55%'
@@ -117,7 +117,7 @@ const cubbies = {
             id: 'rug',
             clue: 'a Persian rug',
             description: 'a Persian rug',
-            image: '../assets/rug.png',
+            image: '../assets/cubbies/rug.png',
             map: {
                 top: '93%',
                 left: '84%'
@@ -135,7 +135,7 @@ const cubbies = {
             id: 'icecream',
             clue: 'an ice cream cone',
             description: 'an ice cream cone',
-            image: '../assets/icecream.png',
+            image: '../assets/cubbies/icecream.png',
             map: {
                 top: '32%',
                 left: '78%'
@@ -158,17 +158,17 @@ const cats = {
 
     id: 'cats',
     title: 'Cats',
-    image: '../assets/cats.jpg',
+    image: '../assets/cats/cats.jpg',
 
     hiddenObjects: [
         {
             id: 'lion',
             clue: 'a lion,',
             description: 'a lion',
-            image: '../assets/lion.png',
+            image: '../assets/cats/lion.png',
             map: {
-                top: '50%',
-                left: '50%'
+                top: '62.5%',
+                left: '66%'
             }
 
             // dimensions: {
@@ -180,13 +180,13 @@ const cats = {
 
         },
         {
-            id: 'shell',
-            clue: 'a shell from the ocean,',
-            description: 'a sea shell',
-            image: '../assets/shell.png',
+            id: 'cat3',
+            clue: 'a cat with a bell,',
+            description: 'a handsome cat',
+            image: '../assets/cats/cat3.png',
             map: {
-                top: '',
-                left: ''
+                top: '74%',
+                left: '20.5%'
             }
 
             // dimensions: {
@@ -201,10 +201,10 @@ const cats = {
             id: 'fish',
             clue: 'a fish who wears hats,',
             description: 'a fish wearing a hat',
-            image: '../assets/pencil.png',
+            image: '../assets/cats/fish.png',
             map: {
-                top: '',
-                left: ''
+                top: '31.5%',
+                left: '6.65%'
             }
 
             // dimensions: {
@@ -215,32 +215,33 @@ const cats = {
 
 
         },
+        {
+            id: 'shell',
+            clue: 'a seaside shell,',
+            description: 'a sea shell',
+            image: '../assets/cats/shell.png',
+            map: {
+                top: '61.5%',
+                left: '18.7%'
+            }
+
+            // dimensions: {
+            //     width: '',
+            //     height: '',
+            //     borderRadius: ''
+            // }
+
+
+        },
+        
         {
             id: 'horse',
             clue: 'a horse that rocks,',
             description: 'rocking horse',
-            image: '../assets/horse.png',
+            image: '../assets/cats/horse.png',
             map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'puppy',
-            clue: 'a little puppy dog,',
-            description: 'a little puppy dog',
-            image: '../assets/puppy.png',
-            map: {
-                top: '',
-                left: ''
+                top: '39.3%',
+                left: '16.5%'
             }
 
             // dimensions: {
@@ -253,30 +254,12 @@ const cats = {
         },
         {
             id: 'button',
-            clue: 'a button with a square',
+            clue: 'a button with a square,',
             description: 'a button',
-            image: '../assets/button.png',
+            image: '../assets/cats/button.png',
             map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'cat1',
-            clue: 'a cat that\'s black',
-            description: 'a black cat',
-            image: '../assets/cat1.png',
-            map: {
-                top: '',
-                left: ''
+                top: '78.9%',
+                left: '82%'
             }
 
             // dimensions: {
@@ -291,10 +274,10 @@ const cats = {
             id: 'cat2',
             clue: 'a cat that hisses',
             description: 'a hissing cat',
-            image: '../assets/cat2.png',
+            image: '../assets/cats/cat2.png',
             map: {
-                top: '',
-                left: ''
+                top: '49.5%',
+                left: '6.3%'
             }
 
             // dimensions: {
@@ -305,115 +288,7 @@ const cats = {
 
 
         },
-        {
-            id: 'cat3',
-            clue: 'a dapper cat with a big red bow',
-            description: 'a handsome cat',
-            image: '../assets/cat3.png',
-            map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'cat4',
-            clue: 'a cat with a fiddle',
-            description: 'a musical cat',
-            image: '../assets/cat4.png',
-            map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'cat5',
-            clue: 'a crying cat',
-            description: 'a crying cat',
-            image: '../assets/cat5.png',
-            map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'cat6',
-            clue: 'a cat on a fence',
-            description: 'an old maids cat',
-            image: '../assets/cat6.png',
-            map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'cat7',
-            clue: 'a baby cat',
-            description: 'a kitty cat',
-            image: '../assets/cat7.png',
-            map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'cat8',
-            clue: 'a cat with a yellow bow',
-            description: 'a yellow cat',
-            image: '../assets/cat8.png',
-            map: {
-                top: '',
-                left: ''
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-
+        
     ],
 
 
@@ -422,17 +297,17 @@ const whitespace = {
 
     id: 'whitespace',
     title: 'Whitespace',
-    image: '../assets/whitespace.jpg',
+    image: '../assets/whitespace/whitespace.jpg',
 
     hiddenObjects: [
         {
             id: 'eagle',
             clue: 'an eagle,',
             description: 'an eagle',
-            image: '../assets/eagle.png',
+            image: '../assets/whitespace/eagle.png',
             map: {
-                top: '50%',
-                left: '50%'
+                top: '73.1%',
+                left: '19%'
             }
 
             // dimensions: {
@@ -447,10 +322,10 @@ const whitespace = {
             id: 'paperclip',
             clue: 'a yellow paperclip,',
             description: 'a yellow paperclip',
-            image: '../assets/paperclip.png',
+            image: '../assets/whitespace/paperclip.png',
             map: {
-                top: '',
-                left: ''
+                top: '85.5%',
+                left: '16.5%'
             }
 
             // dimensions: {
@@ -465,10 +340,10 @@ const whitespace = {
             id: 'spider',
             clue: 'a black spider,',
             description: 'a spider',
-            image: '../assets/spider.png',
+            image: '../assets/whitespace/spider.png',
             map: {
-                top: '',
-                left: ''
+                top: '50%',
+                left: '50%'
             }
 
             // dimensions: {
@@ -483,10 +358,10 @@ const whitespace = {
             id: 'shoe',
             clue: 'a pink baby shoe,',
             description: 'a pink shoe',
-            image: '../assets/shoe.png',
+            image: '../assets/whitespace/shoe.png',
             map: {
-                top: '',
-                left: ''
+                top: '63.5%',
+                left: '63.4%'
             }
 
             // dimensions: {
@@ -501,10 +376,10 @@ const whitespace = {
             id: 'phone',
             clue: 'a bright red phone,',
             description: 'a red phone',
-            image: '../assets/phone.png',
+            image: '../assets/whitespace/phone.png',
             map: {
-                top: '',
-                left: ''
+                top: '31.9%',
+                left: '65.5%'
             }
 
             // dimensions: {
@@ -517,12 +392,12 @@ const whitespace = {
         },
         {
             id: 'fish',
-            clue: 'a red fish',
+            clue: 'a fish that\'s red,',
             description: 'a red fish',
-            image: '../assets/fish.png',
+            image: '../assets/whitespace/fish.png',
             map: {
-                top: '',
-                left: ''
+                top: '45%',
+                left: '87.5%'
             }
 
             // dimensions: {
@@ -535,12 +410,12 @@ const whitespace = {
         },
         {
             id: 'corn',
-            clue: 'an ear of corn',
+            clue: 'an ear of corn,',
             description: 'a corn cob',
-            image: '../assets/corn.png',
+            image: '../assets/whitespace/corn.png',
             map: {
-                top: '',
-                left: ''
+                top: '83%',
+                left: '5.5%'
             }
 
             // dimensions: {
@@ -555,10 +430,10 @@ const whitespace = {
             id: 'hat',
             clue: 'a hat that\'s blue',
             description: 'a blue hat',
-            image: '../assets/hat.png',
+            image: '../assets/whitespace/hat.png',
             map: {
-                top: '',
-                left: ''
+                top: '16.5%',
+                left: '62.9%'
             }
 
             // dimensions: {
@@ -578,14 +453,14 @@ const beads = {
 
     id: 'beads',
     title: 'Bead Explosion',
-    image: '../assets/bead-explosion.jpg',
+    image: '../assets/beads/bead-explosion.jpeg',
 
     hiddenObjects: [
         {
             id: 'banana',
             clue: 'a beady banana,',
             description: 'a banana',
-            image: '../assets/banana.png',
+            image: '../assets/beads/banana.png',
             map: {
                 top: '50%',
                 left: '50%'
@@ -603,10 +478,10 @@ const beads = {
             id: 'teddy-bear',
             clue: 'a smiling teddy bear,',
             description: 'a yellow teddy bear',
-            image: '../assets/teddy-bear.png',
+            image: '../assets/beads/teddy-bear.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {
@@ -621,10 +496,10 @@ const beads = {
             id: 'squirrel',
             clue: 'a little squirrel,',
             description: 'a little squirrel',
-            image: '../assets/squirrel.png',
+            image: '../assets/beads/squirrel.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {
@@ -639,10 +514,10 @@ const beads = {
             id: 'giraffe',
             clue: 'a lost giraffe,',
             description: 'a silver giraffe',
-            image: '../assets/giraffe.png',
+            image: '../assets/beads/giraffe.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {
@@ -657,10 +532,10 @@ const beads = {
             id: 'dragonfly',
             clue: 'a dragonfly',
             description: 'a dragonfly',
-            image: '../assets/dragonfly.png',
+            image: '../assets/beads/dragonfly.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {
@@ -675,10 +550,10 @@ const beads = {
             id: 'teddy-bear2',
             clue: 'a tied up bear',
             description: 'a teddybear with a red bow',
-            image: '../assets/teddy-bear2.png',
+            image: '../assets/beads/teddy-bear2.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {
@@ -693,10 +568,10 @@ const beads = {
             id: 'telephone',
             clue: 'a silver telephone',
             description: 'a silver telephone',
-            image: '../assets/telephone.png',
+            image: '../assets/beads/telephone.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {
@@ -711,10 +586,10 @@ const beads = {
             id: 'fan',
             clue: 'a bead fan',
             description: 'a small blue fan',
-            image: '../assets/fan.png',
+            image: '../assets/beads/fan.png',
             map: {
-                top: '',
-                left: ''
+                top: '0%',
+                left: '0%'
             }
 
             // dimensions: {

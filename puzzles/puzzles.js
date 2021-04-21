@@ -1,7 +1,8 @@
 import { findById, renderProfile } from '../utils.js';
 import { puzzles } from '../data.js';
 import { updateGame, createGame, getGame } from '../game-utils.js';
-
+import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
+checkIfAUserIsLoggedIn();
 renderProfile();
 
 
@@ -19,7 +20,7 @@ if (!game) {
 
 
 
-let duration = game.time;
+let duration = 5;
 //change duration to be equal to the games time property. 5 minutes by default
 const display = document.querySelector('#time');
 
@@ -67,6 +68,8 @@ const clues = document.querySelector('#item-list');
 const puzzleId = params.get('id');
 const puzzle = findById(puzzles, puzzleId);
 
+game.puzzle = puzzle.id;
+//add puzzle id to game object so it can be referenced on results page 
 
 
 

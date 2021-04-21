@@ -11,8 +11,8 @@ const cubbies = {
             description: 'a lamb',
             image: '../assets/lamb.png',
             map: {
-                top: '50%',
-                left: '50%'
+                top: '9.5%',
+                left: '43%'
             }
 
             // dimensions: {
@@ -29,8 +29,8 @@ const cubbies = {
             description: 'a small silver jack',
             image: '../assets/jack.png',
             map: {
-                top: '',
-                left: ''
+                top: '60%',
+                left: '12.7%'
             }
 
             // dimensions: {
@@ -47,8 +47,8 @@ const cubbies = {
             description: 'a bright yellow pencil',
             image: '../assets/pencil.png',
             map: {
-                top: '',
-                left: ''
+                top: '5.6%',
+                left: '66.3%'
             }
 
             // dimensions: {
@@ -65,8 +65,8 @@ const cubbies = {
             description: 'two black arrows',
             image: '../assets/arrows.png',
             map: {
-                top: '',
-                left: ''
+                top: '65.2%',
+                left: '7.6%'
             }
 
             // dimensions: {
@@ -83,8 +83,8 @@ const cubbies = {
             description: 'a little puppy dog',
             image: '../assets/puppy.png',
             map: {
-                top: '',
-                left: ''
+                top: '65%',
+                left: '44%'
             }
 
             // dimensions: {
@@ -101,8 +101,8 @@ const cubbies = {
             description: 'a red ladybug',
             image: '../assets/ladybug.png',
             map: {
-                top: '',
-                left: ''
+                top: '45.5%',
+                left: '55%'
             }
 
             // dimensions: {
@@ -119,8 +119,8 @@ const cubbies = {
             description: 'a Persian rug',
             image: '../assets/rug.png',
             map: {
-                top: '',
-                left: ''
+                top: '93%',
+                left: '84%'
             }
 
             // dimensions: {
@@ -137,8 +137,8 @@ const cubbies = {
             description: 'an ice cream cone',
             image: '../assets/icecream.png',
             map: {
-                top: '',
-                left: ''
+                top: '32%',
+                left: '78%'
             }
 
             // dimensions: {

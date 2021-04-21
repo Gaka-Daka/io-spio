@@ -3,9 +3,9 @@ const loginButton = document.getElementById('login');
 
 
 newButton.addEventListener('click', () => {
-    window.location = '../signup/index.html';
+    window.location = './signup/index.html';
 });
 
 loginButton.addEventListener('click', () => {
-    window.location = '../login/index.html';
+    window.location = './login/index.html';
 });

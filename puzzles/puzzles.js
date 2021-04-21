@@ -24,6 +24,7 @@ let myInterval = setInterval(function () { //eslint-disable-line
 
     if (--timer < 0) {
         doneFunction();
+  
     }
 }, 1000);
 
@@ -32,6 +33,12 @@ function doneFunction() {
     const endGameSpan = document.createElement('span');
     const moveOn = document.createElement('button');
     moveOn.textContent = 'Go to Results';
+
+    const clickies = document.querySelectorAll('.clicky')
+    for (let clicky of clickies) {
+        clicky.classList.add('disabled');
+    }
+    image.classList.add('disabled');
 
     moveOn.addEventListener('click', () => {
         window.location = '../results/index.html';
@@ -64,6 +71,7 @@ elTitle.textContent = puzzle.title;
 
 const image = document.createElement('img');
 image.src = puzzle.image;
+image.style.width = '1000px';
 
 puzzle.hiddenObjects.forEach(object => {
     game.foundObjects.push({
@@ -81,6 +89,7 @@ puzzle.hiddenObjects.forEach(object => {
     clicky.textContent = object.id;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
+    clicky.classList.add("clicky")
 
     clicky.addEventListener('click', () => {
         const matchingIds = findById(game.foundObjects, object.id);
@@ -98,6 +107,8 @@ puzzle.hiddenObjects.forEach(object => {
     scoreBox.append(currentScore, mistakes);
 
 });
+
+
 
 image.addEventListener('click', () => {
     game.misclicks++;
@@ -117,3 +128,4 @@ function allClickiesFound() {
     }
     return true;
 }
+

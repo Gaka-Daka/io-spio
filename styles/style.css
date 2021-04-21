@@ -115,3 +115,9 @@ footer {
 .disabled {
     pointer-events: none;
 }
+
+
+
+.baby {
+    cursor: pointer;
+}

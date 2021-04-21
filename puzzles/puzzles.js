@@ -50,7 +50,7 @@ function doneFunction() {
     for (let clicky of clickies) {
         clicky.classList.add('disabled');
     }
-    image.classList.add('disabled');
+    // image.classList.add('disabled');
 
     moveOn.addEventListener('click', () => {
         window.location = '../results/index.html';
@@ -81,10 +81,14 @@ let score = pointTotal(game, correctClicks);
 
 elTitle.textContent = puzzle.title;
 
-const image = document.createElement('img');
-image.classList.add('puzzle-map');
-image.src = puzzle.image;
-image.style.width = '1000px';
+// const image = document.createElement('img');
+// image.classList.add('puzzle-map');
+// image.src = puzzle.image;
+
+//adding background image to section
+elPuzzle.style.backgroundImage = `url(${puzzle.image}`;
+
+// image.style.width = '1000px';
 
 puzzle.hiddenObjects.forEach(object => {
     game.foundObjects.push({
@@ -99,11 +103,14 @@ puzzle.hiddenObjects.forEach(object => {
 
     const clicky = document.createElement('div');
     const clickyImg = document.createElement('img');
+    clickyImg.classList.add("clicky-image")
 
-    clicky.img = object.img;
+    clickyImg.src = object.image
+    // clicky.img = object.img;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
 
+    clicky.append(clickyImg)
     clicky.classList.add('clicky');
 
 
@@ -124,22 +131,22 @@ puzzle.hiddenObjects.forEach(object => {
 
     });
 
-    elPuzzle.append(clicky, clickyImg);
+    elPuzzle.append(clicky);
+    // elPuzzle.append(clicky, clickyImg);
     scoreBox.append(currentScore, mistakes);
 
 });
 
-
-
-image.addEventListener('click', () => {
+//changed image to elPuzzle
+elPuzzle.addEventListener('click', () => {
     game.misclicks++;
     score = pointTotal(game, correctClicks);
     currentScore.textContent = score;
 });
 
-elPuzzle.append(image);
+// elPuzzle.append(image);
 
-//function to cause push of misclicks after timer runs out or all items foun
+//function to cause push of misclicks after timer runs out or all items found
 function allClickiesFound() {
 
     for (let foundObject of game.foundObjects) {

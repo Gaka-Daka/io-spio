@@ -144,11 +144,12 @@ footer {
 }
 
 .clicky-image {
-    /* opacity: .2; */
+    opacity: 0;
     width: 60%;
     /* display: none; */
 }
 
 .drop-shadow {
     filter: drop-shadow(5px 5px 5px hsl(180, 50%, 50%));
+    opacity: 1;
 }

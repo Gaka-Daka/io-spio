@@ -1,9 +1,13 @@
 import { puzzles } from '../data.js';
+
 import { renderProfile } from '../utils.js';
+
 import { createGame, updateGame } from '../game-utils.js';
 
 renderProfile();
 const contentsList = document.querySelector('ul');
+
+
 
 function generateTableOfContents() {
     puzzles.forEach(puzzle => {
@@ -32,6 +36,5 @@ form.addEventListener('submit', (event) => {
     game.time = Number(time) * 60;
     game.difficulty = difficulty;
     updateGame(game);
-
 
 });

@@ -4,6 +4,7 @@ import { updateGame, createGame, getGame } from '../game-utils.js';
 
 renderProfile();
 
+
 function pointTotal(game, correctClicks) {
     let score = (correctClicks * 100) - (game.misclicks * 10);
     return score;
@@ -15,6 +16,7 @@ if (!game) {
 
     // if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
 }
+
 
 
 let duration = game.time;

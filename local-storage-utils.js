@@ -5,6 +5,7 @@ export function createUser(username, password) {
     const user = {
         username,
         password,
+        games: []
     };
 
     updateUser(user);

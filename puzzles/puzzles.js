@@ -20,7 +20,7 @@ if (!game) {
 
 
 
-let duration = game.time;
+let duration = 5;
 //change duration to be equal to the games time property. 5 minutes by default
 const display = document.querySelector('#time');
 

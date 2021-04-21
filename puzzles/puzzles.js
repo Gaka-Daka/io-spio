@@ -103,14 +103,14 @@ puzzle.hiddenObjects.forEach(object => {
 
     const clicky = document.createElement('div');
     const clickyImg = document.createElement('img');
-    clickyImg.classList.add("clicky-image")
+    clickyImg.classList.add('clicky-image');
 
-    clickyImg.src = object.image
+    clickyImg.src = object.image;
     // clicky.img = object.img;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
 
-    clicky.append(clickyImg)
+    clicky.append(clickyImg);
     clicky.classList.add('clicky');
 
 

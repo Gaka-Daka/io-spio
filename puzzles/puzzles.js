@@ -1,7 +1,8 @@
 import { findById, renderProfile } from '../utils.js';
 import { puzzles } from '../data.js';
 import { updateGame, createGame, getGame } from '../game-utils.js';
-
+import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
+checkIfAUserIsLoggedIn();
 renderProfile();
 
 

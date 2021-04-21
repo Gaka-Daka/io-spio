@@ -1,7 +1,8 @@
 import { puzzles } from '../data.js';
 import { getGame } from '../game-utils.js';
+import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
 import { findById, renderProfile } from '../utils.js';
-
+checkIfAUserIsLoggedIn();
 renderProfile();
 
 const foundTable = document.querySelector('#found-table');
@@ -22,6 +23,7 @@ for (let gameItem of game.foundObjects) {
     }
 
 }
+
 
 function addTableRow(matchingItem) {
     const tr = document.createElement('tr');

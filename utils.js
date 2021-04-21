@@ -21,6 +21,7 @@ export function renderProfile() {
 
     const aCredits = document.createElement('a');
     aCredits.href = '../credits/index.html';
+    aCredits.textContent = 'Credits';
 
     const profile = document.createElement('div');
     profile.classList.add('profile');

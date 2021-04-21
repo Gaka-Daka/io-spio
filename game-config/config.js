@@ -14,8 +14,6 @@ function generateTableOfContents() {
         tableItem.append(puzzleLink);
         contentsList.append(tableItem);
     });
-
-
 }
 
 generateTableOfContents();

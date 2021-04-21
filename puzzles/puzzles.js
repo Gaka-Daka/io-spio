@@ -1,7 +1,9 @@
-import { findById } from '../utils.js';
+import { findById, renderProfile } from '../utils.js';
 import { puzzles } from '../data.js';
-
 import { updateGame, createGame, getGame } from '../game-utils.js';
+
+renderProfile();
+
 function pointTotal(game, correctClicks) {
     let score = (correctClicks * 100) - (game.misclicks * 10);
     return score;
@@ -10,7 +12,7 @@ function pointTotal(game, correctClicks) {
 let game = getGame();
 if (!game) {
     game = createGame();
-    
+
     // if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
 }
 
@@ -102,7 +104,7 @@ puzzle.hiddenObjects.forEach(object => {
 
     clicky.classList.add('clicky');
 
-    
+
     if (game.difficulty === 'baby') {
         clicky.classList.add('baby');
     }

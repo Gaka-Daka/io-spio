@@ -1,7 +1,11 @@
 import { puzzles } from '../data.js';
+
+import { renderProfile } from '../utils.js';
+
 import { createGame, updateGame } from '../game-utils.js';
 
-const contentsList = document.querySelector ('ul');
+renderProfile();
+const contentsList = document.querySelector('ul');
 
 
 
@@ -14,8 +18,6 @@ function generateTableOfContents() {
         tableItem.append(puzzleLink);
         contentsList.append(tableItem);
     });
-    
-
 }
 
 generateTableOfContents();
@@ -29,11 +31,10 @@ form.addEventListener('submit', (event) => {
 
     const time = formData.get('time');
     const difficulty = formData.get('difficulty');
-  
+
     const game = createGame();
     game.time = Number(time) * 60;
     game.difficulty = difficulty;
     updateGame(game);
-    
-    
+
 });

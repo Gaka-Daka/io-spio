@@ -43,10 +43,15 @@ export function logIn(username) {
     localStorage.setItem(LOGGED_IN, username);
 }
 
-export function logOut() {
+export function logout() {
 
     localStorage.setItem(LOGGED_IN, '');
 }
 
+// export function checkIfAUserIsLoggedIn() {
+//     const logged_in = localStorage.getItem('LOGGED_IN');
 
-
+//     if (logged_in === '') {
+//         window.location = '../index.html';
+//     } else return;
+// }

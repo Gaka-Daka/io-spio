@@ -115,3 +115,7 @@ footer {
 .disabled {
     pointer-events: none;
 }
+
+.puzzle-map {
+    position: relative;
+}

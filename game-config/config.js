@@ -1,6 +1,8 @@
 import { puzzles } from '../data.js';
+import { renderProfile } from '../utils.js';
 
-const contentsList = document.querySelector ('ul');
+renderProfile();
+const contentsList = document.querySelector('ul');
 
 function generateTableOfContents() {
     puzzles.forEach(puzzle => {
@@ -11,7 +13,7 @@ function generateTableOfContents() {
         tableItem.append(puzzleLink);
         contentsList.append(tableItem);
     });
-    
+
 
 }
 

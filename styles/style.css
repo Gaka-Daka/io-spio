@@ -116,6 +116,17 @@ footer {
     pointer-events: none;
 }
 
+
 .puzzle-map {
     position: relative;
+}
+
+.clicky {
+    position: absolute;
+
+
+
+.baby {
+    cursor: pointer;
+
 }

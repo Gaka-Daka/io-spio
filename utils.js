@@ -17,7 +17,7 @@ export function renderProfile() {
 
     const aInstructions = document.createElement('a');
     aInstructions.href = '../game-config/index.html';
-    aInstructions.textContent = 'Instructions'
+    aInstructions.textContent = 'Instructions';
 
     const aCredits = document.createElement('a');
     aCredits.href = '../credits/index.html';

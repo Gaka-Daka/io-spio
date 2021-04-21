@@ -13,7 +13,7 @@ body {
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
     
-    --header-height: 80px;
+    --header-height: 100px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
@@ -54,8 +54,9 @@ header {
 }
 
 .header-container {
-    display: flex;
-    justify-content:space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content:center;
     align-content: center;
     margin: 0px 20px;
     width: 100%;
@@ -78,7 +79,7 @@ header {
 
 .profile {
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin: auto;
     width: auto;
     font-family: 'Imbue', serif;
@@ -162,13 +163,4 @@ footer {
 
 .baby {
     cursor: pointer;
-
-}
-
-.clicky-image {
-    /* opacity: 0; */
-}
-
-.logo {
-    
 }

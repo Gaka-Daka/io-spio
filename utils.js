@@ -14,7 +14,7 @@ export function renderProfile() {
 
     const logo = document.createElement('img');
     logo.classList.add('logo');
-    logo.src = '../assets/iospio-logo.png';
+    logo.src = '../assets/logo.png';
 
 
     const nav = document.createElement('div');

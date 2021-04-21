@@ -4,9 +4,12 @@ export function createGame() {
     const game = {
         misclicks: 0,
         foundObjects: [],
-        points: 0
+        points: 0,
+        difficulty: 'normal',
+        time: (5 * 60)
+        //add default time/difficulty settings to user if none selected on config page
     };
-    // updateGame(game);
+    
     return game;
 }
 

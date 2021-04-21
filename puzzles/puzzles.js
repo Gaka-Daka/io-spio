@@ -1,14 +1,26 @@
-import { findById } from '../utils.js';
+import { findById, renderProfile } from '../utils.js';
 import { puzzles } from '../data.js';
+import { updateGame, createGame, getGame } from '../game-utils.js';
 
-import { updateGame, createGame } from '../game-utils.js';
+renderProfile();
+
+
 function pointTotal(game, correctClicks) {
     let score = (correctClicks * 100) - (game.misclicks * 10);
     return score;
 }
+//change game to get game because we created it in the config page
+let game = getGame();
+if (!game) {
+    game = createGame();
 
-//sourced from: https://jsfiddle.net/wr1ua0db/17/
-let duration = 20;
+    // if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
+}
+
+
+
+let duration = game.time;
+//change duration to be equal to the games time property. 5 minutes by default
 const display = document.querySelector('#time');
 
 let timer = duration, minutes, seconds;
@@ -24,21 +36,21 @@ let myInterval = setInterval(function () { //eslint-disable-line
 
     if (--timer < 0) {
         doneFunction();
-  
+
     }
 }, 1000);
-
+//sourced from: https://jsfiddle.net/wr1ua0db/17/
 
 function doneFunction() {
     const endGameSpan = document.createElement('span');
     const moveOn = document.createElement('button');
     moveOn.textContent = 'Go to Results';
 
-    const clickies = document.querySelectorAll('.clicky')
+    const clickies = document.querySelectorAll('.clicky');
     for (let clicky of clickies) {
         clicky.classList.add('disabled');
     }
-    image.classList.add('disabled');
+    // image.classList.add('disabled');
 
     moveOn.addEventListener('click', () => {
         window.location = '../results/index.html';
@@ -55,7 +67,7 @@ const clues = document.querySelector('#item-list');
 const puzzleId = params.get('id');
 const puzzle = findById(puzzles, puzzleId);
 
-const game = createGame();
+
 
 
 const elTitle = document.querySelector('#puzzle-title');
@@ -69,9 +81,14 @@ let score = pointTotal(game, correctClicks);
 
 elTitle.textContent = puzzle.title;
 
-const image = document.createElement('img');
-image.src = puzzle.image;
-image.style.width = '1000px';
+// const image = document.createElement('img');
+// image.classList.add('puzzle-map');
+// image.src = puzzle.image;
+
+//adding background image to section
+elPuzzle.style.backgroundImage = `url(${puzzle.image}`;
+
+// image.style.width = '1000px';
 
 puzzle.hiddenObjects.forEach(object => {
     game.foundObjects.push({
@@ -85,11 +102,22 @@ puzzle.hiddenObjects.forEach(object => {
     clues.append(clickyClue);
 
     const clicky = document.createElement('div');
-    //change textContent to image
-    clicky.textContent = object.id;
+    const clickyImg = document.createElement('img');
+    clickyImg.classList.add("clicky-image")
+
+    clickyImg.src = object.image
+    // clicky.img = object.img;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
-    clicky.classList.add("clicky")
+
+    clicky.append(clickyImg)
+    clicky.classList.add('clicky');
+
+
+    if (game.difficulty === 'baby') {
+        clicky.classList.add('baby');
+    }
+
 
     clicky.addEventListener('click', () => {
         const matchingIds = findById(game.foundObjects, object.id);
@@ -104,21 +132,21 @@ puzzle.hiddenObjects.forEach(object => {
     });
 
     elPuzzle.append(clicky);
+    // elPuzzle.append(clicky, clickyImg);
     scoreBox.append(currentScore, mistakes);
 
 });
 
-
-
-image.addEventListener('click', () => {
+//changed image to elPuzzle
+elPuzzle.addEventListener('click', () => {
     game.misclicks++;
     score = pointTotal(game, correctClicks);
     currentScore.textContent = score;
 });
 
-elPuzzle.append(image);
+// elPuzzle.append(image);
 
-//function to cause push of misclicks after timer runs out or all items foun
+//function to cause push of misclicks after timer runs out or all items found
 function allClickiesFound() {
 
     for (let foundObject of game.foundObjects) {

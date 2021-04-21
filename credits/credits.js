@@ -1,1 +1,3 @@
-console.log('hello');
+import { renderProfile } from '../utils.js';
+
+renderProfile();

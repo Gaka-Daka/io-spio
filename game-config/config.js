@@ -3,7 +3,8 @@ import { puzzles } from '../data.js';
 import { renderProfile } from '../utils.js';
 
 import { createGame, updateGame } from '../game-utils.js';
-
+import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
+checkIfAUserIsLoggedIn();
 renderProfile();
 const contentsList = document.querySelector('ul');
 

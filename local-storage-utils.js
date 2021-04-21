@@ -1,3 +1,5 @@
+// import { renderProfile } from "./utils";
+
 const USER = 'USER';
 const LOGGED_IN = 'LOGGED_IN';
 
@@ -59,3 +61,4 @@ export function checkIfAUserIsLoggedIn() {
         window.location = '../index.html';
     } else return;
 }
+

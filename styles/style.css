@@ -144,8 +144,8 @@ footer {
 
 #puzzle {
     position: relative;
-    width: 1982px;
-    height: 1187px;
+    width: 1189.2px;
+    height: 712.2px;
     /* width: 1000px;
     height: 599px; */
     background-size: cover;
@@ -157,10 +157,25 @@ footer {
     z-index: 50;
     max-width: 100%;
     max-height: 100%;
-    border: 1px solid black;
-
+    /* border: 1px solid black; */
+    
+    /* width: 60% */
+    
 }
 
 .baby {
     cursor: pointer;
+
+
+}
+
+.clicky-image {
+    /* opacity: .2; */
+    width: 60%;
+    /* display: none; */
+}
+
+.drop-shadow {
+    filter: drop-shadow(5px 5px 5px hsl(180, 50%, 50%));
+
 }

@@ -1,14 +1,22 @@
 import { findById } from '../utils.js';
 import { puzzles } from '../data.js';
 
-import { updateGame, createGame } from '../game-utils.js';
+import { updateGame, createGame, getGame } from '../game-utils.js';
 function pointTotal(game, correctClicks) {
     let score = (correctClicks * 100) - (game.misclicks * 10);
     return score;
 }
+//change game to get game because we created it in the config page
+let game = getGame();
+if (!game) {
+    game = createGame();
+    
+    // if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
+}
 
-//sourced from: https://jsfiddle.net/wr1ua0db/17/
-let duration = 20;
+
+let duration = game.time;
+//change duration to be equal to the games time property. 5 minutes by default
 const display = document.querySelector('#time');
 
 let timer = duration, minutes, seconds;
@@ -27,7 +35,7 @@ let myInterval = setInterval(function () { //eslint-disable-line
   
     }
 }, 1000);
-
+//sourced from: https://jsfiddle.net/wr1ua0db/17/
 
 function doneFunction() {
     const endGameSpan = document.createElement('span');
@@ -55,7 +63,7 @@ const clues = document.querySelector('#item-list');
 const puzzleId = params.get('id');
 const puzzle = findById(puzzles, puzzleId);
 
-const game = createGame();
+
 
 
 const elTitle = document.querySelector('#puzzle-title');
@@ -89,7 +97,10 @@ puzzle.hiddenObjects.forEach(object => {
     clicky.textContent = object.id;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
-    clicky.classList.add("clicky")
+    clicky.classList.add("clicky");
+    if (game.difficulty === 'baby') {
+        clicky.classList.add('baby');
+    }
 
     clicky.addEventListener('click', () => {
         const matchingIds = findById(game.foundObjects, object.id);

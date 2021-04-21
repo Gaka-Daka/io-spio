@@ -67,6 +67,8 @@ const clues = document.querySelector('#item-list');
 const puzzleId = params.get('id');
 const puzzle = findById(puzzles, puzzleId);
 
+game.puzzle = puzzle.id;
+//add puzzle id to game object so it can be referenced on results page 
 
 
 

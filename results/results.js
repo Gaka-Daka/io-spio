@@ -1,13 +1,29 @@
 import { puzzles } from '../data.js';
 import { getGame } from '../game-utils.js';
+import { checkIfAUserIsLoggedIn, getUser, updateUser } from '../local-storage-utils.js';
 import { findById, renderProfile } from '../utils.js';
-
+checkIfAUserIsLoggedIn();
 renderProfile();
 
-const foundTable = document.querySelector('#found-table');
+//pushing the previous game to the user object. will render results based on this
+
+const user = getUser();
+
 const game = getGame();
 
-const hiddenObjects = puzzles[0].hiddenObjects;
+
+user.games.push(game);
+
+
+
+const button = document.querySelector('#play-again');
+console.log(button);
+const foundTable = document.querySelector('#found-table');
+const scoreBoard = document.querySelector('#scoreboard');
+
+const currentPuzzle = findById(puzzles, game.puzzle);
+
+const hiddenObjects = currentPuzzle.hiddenObjects;
 
 
 for (let gameItem of game.foundObjects) {
@@ -23,6 +39,7 @@ for (let gameItem of game.foundObjects) {
 
 }
 
+
 function addTableRow(matchingItem) {
     const tr = document.createElement('tr');
     const tdFoundObject = document.createElement('td');
@@ -36,3 +53,42 @@ function addTableRow(matchingItem) {
     tr.append(tdFoundObject, tdDescription);
     return tr;
 }
+function addResultTableRow(user, game) {
+    const tr = document.createElement('tr');
+    tr.classList.add('scores');
+    const tdUser = document.createElement('td');
+    tdUser.textContent = user.username;
+
+    const tdPuzzle = document.createElement('td');
+    tdPuzzle.textContent = game.puzzle;
+
+    const tdScore = document.createElement('td');
+    tdScore.textContent = game.points;
+
+    const tdDifficulty = document.createElement('td');
+    tdDifficulty.textContent = game.difficulty;
+   
+
+    
+
+    tr.append(tdUser, tdPuzzle, tdDifficulty, tdScore);
+    
+    return tr;
+}
+for (let game of user.games){
+    const score = addResultTableRow(user, game);
+    scoreBoard.append(score);
+
+}
+
+
+updateUser(user);
+
+//a really round about way of find and adding a bold style to the most recent score.
+const allScores = document.querySelectorAll('.scores');
+const mostRecentScore = allScores[allScores.length - 1];
+mostRecentScore.classList.add('last-score');
+button.addEventListener('click', () => {
+    localStorage.removeItem('GAME');
+    window.location = '../game-config/index.html';
+});

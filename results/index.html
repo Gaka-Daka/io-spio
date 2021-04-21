@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500;700&display=swap" rel="stylesheet">
     <title>Instructions</title>
 </head>
 
@@ -29,16 +31,18 @@
         </section>
 
         <section>
-            <table id="scoreboard">
-                <thead>
+            <table class="scoreboard"id="scoreboard">
+                <thead >
                     <th>Username</th>
+                    <th>Map</th>
+                    <th>Difficulty</th>
                     <th>Score</th>
                 </thead>
                 <!-- render scoreboard dynamically based on users -->
             </table>
         </section>
 
-        <button>Play Again</button>
+        <button id="play-again">Play Again</button>
 
     </main>
     <footer>

@@ -1,7 +1,8 @@
 import { findById, renderProfile } from '../utils.js';
 import { puzzles } from '../data.js';
 import { updateGame, createGame, getGame } from '../game-utils.js';
-
+import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
+checkIfAUserIsLoggedIn();
 renderProfile();
 
 
@@ -20,6 +21,7 @@ if (!game) {
 
 
 let duration = game.time;
+
 //change duration to be equal to the games time property. 5 minutes by default
 const display = document.querySelector('#time');
 
@@ -67,6 +69,8 @@ const clues = document.querySelector('#item-list');
 const puzzleId = params.get('id');
 const puzzle = findById(puzzles, puzzleId);
 
+game.puzzle = puzzle.id;
+//add puzzle id to game object so it can be referenced on results page 
 
 
 
@@ -103,14 +107,14 @@ puzzle.hiddenObjects.forEach(object => {
 
     const clicky = document.createElement('div');
     const clickyImg = document.createElement('img');
-    clickyImg.classList.add("clicky-image")
+    clickyImg.classList.add('clicky-image');
 
-    clickyImg.src = object.image
+    clickyImg.src = object.image;
     // clicky.img = object.img;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
 
-    clicky.append(clickyImg)
+    clicky.append(clickyImg);
     clicky.classList.add('clicky');
 
 

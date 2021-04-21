@@ -14,10 +14,13 @@ for (let gameItem of game.foundObjects) {
    
     
     const matchingItem = findById(hiddenObjects, gameItem.id);
+        
+    if (gameItem.hasBeenFound === true) {
+
+        const tr = addTableRow(matchingItem);
+        foundTable.append(tr);
+    } 
     
-    const tr = addTableRow(matchingItem);
-  
-    foundTable.append(tr);
 }
 
 function addTableRow(matchingItem) {

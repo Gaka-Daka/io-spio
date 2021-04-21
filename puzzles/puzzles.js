@@ -34,7 +34,7 @@ function doneFunction() {
     const moveOn = document.createElement('button');
     moveOn.textContent = 'Go to Results';
 
-    const clickies = document.querySelectorAll('.clicky')
+    const clickies = document.querySelectorAll('.clicky');
     for (let clicky of clickies) {
         clicky.classList.add('disabled');
     }

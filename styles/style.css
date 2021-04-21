@@ -119,3 +119,7 @@ footer {
 .puzzle-map {
     position: relative;
 }
+
+.clicky {
+    position: absolute;
+}

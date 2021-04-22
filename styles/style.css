@@ -284,7 +284,7 @@ td {
     width: 594.6px;
     margin: 10px;
     text-align: center;
-    border: 1px solid black;
+
     display: flex;
     flex-direction: column;
 }

@@ -28,6 +28,21 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-image: url('../assets/book.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border: 15px blue solid;
+    height: 100vh;
+}
+
+#puzzle-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0rem 0rem 1.5rem;
 }
 
 section {

@@ -97,7 +97,7 @@ const cubbies = {
         },
         {
             id: 'ladybug',
-            clue: 'a red ladybug',
+            clue: 'a red ladybug,',
             description: 'a red ladybug',
             image: '../assets/cubbies/ladybug.png',
             map: {
@@ -115,7 +115,7 @@ const cubbies = {
         },
         {
             id: 'rug',
-            clue: 'a Persian rug',
+            clue: 'a Persian rug,',
             description: 'a Persian rug',
             image: '../assets/cubbies/rug.png',
             map: {
@@ -133,7 +133,7 @@ const cubbies = {
         },
         {
             id: 'icecream',
-            clue: 'an ice cream cone',
+            clue: 'an ice cream cone.',
             description: 'an ice cream cone',
             image: '../assets/cubbies/icecream.png',
             map: {
@@ -233,7 +233,7 @@ const cats = {
 
 
         },
-        
+
         {
             id: 'horse',
             clue: 'a horse that rocks,',
@@ -288,7 +288,7 @@ const cats = {
 
 
         },
-        
+
     ],
 
 

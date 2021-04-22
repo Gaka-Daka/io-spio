@@ -38,7 +38,6 @@ let myInterval = setInterval(function () { //eslint-disable-line
 
     if (--timer < 0) {
         doneFunction();
-
     }
 }, 1000);
 //sourced from: https://jsfiddle.net/wr1ua0db/17/
@@ -46,6 +45,7 @@ let myInterval = setInterval(function () { //eslint-disable-line
 function doneFunction() {
     const endGameSpan = document.createElement('span');
     const moveOn = document.createElement('button');
+    moveOn.classList.add('end-game-button');
     moveOn.textContent = 'Go to Results';
 
     const clickies = document.querySelectorAll('.clicky');
@@ -76,7 +76,6 @@ game.puzzle = puzzle.id;
 const elPuzzle = document.querySelector('#puzzle');
 const scoreBox = document.querySelector('#timer');
 const currentScore = document.getElementById('score');
-const mistakes = document.getElementById('WRONG');
 
 let correctClicks = 0;
 let score = pointTotal(game, correctClicks);
@@ -135,7 +134,7 @@ puzzle.hiddenObjects.forEach(object => {
 
     elPuzzle.append(clicky);
     // elPuzzle.append(clicky, clickyImg);
-    scoreBox.append(currentScore, mistakes);
+    scoreBox.append(currentScore);
 
 });
 

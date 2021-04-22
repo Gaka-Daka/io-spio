@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Instructions</title>
 </head>
 
@@ -18,10 +20,10 @@
     <header>
 
     </header>
-    <main>
-        <section>
+    <main class="main-results">
+        <section class="left-results">
             <table id="found-table">
-                Final Results
+                <h3 class="table-title">Final Results</h3>
                 <thead>
                     <th>Found Objects</th>
                     <th>Description</th>
@@ -30,9 +32,10 @@
             </table>
         </section>
 
-        <section>
-            <table class="scoreboard"id="scoreboard">
-                <thead >
+        <section class="right-results">
+            <table class="scoreboard" id="scoreboard">
+                <thead>
+                    <h3 class="table-title">Scoreboard</h3>
                     <th>Username</th>
                     <th>Map</th>
                     <th>Difficulty</th>
@@ -40,9 +43,10 @@
                 </thead>
                 <!-- render scoreboard dynamically based on users -->
             </table>
+            <button id="play-again" class="play-again-button">Play Again</button>
         </section>
 
-        <button id="play-again">Play Again</button>
+
 
     </main>
     <footer>

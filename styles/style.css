@@ -19,7 +19,8 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background: rgb(57,7,2);
+    background: linear-gradient(0deg, rgba(57,7,2,1) 0%, rgba(164,15,0,1) 100%);
 }
 
 main {
@@ -31,9 +32,9 @@ main {
     background-image: url('../assets/book.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 1650px 1250px;
     position: relative;
-    border: 15px blue solid;
-    height: 100vh;
+    height: 90vh;
 }
 
 #puzzle-container {
@@ -42,7 +43,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 6rem 0rem 0rem 1.5rem;
+    margin: -8rem 0rem 0rem 1.3rem;
 }
 
 section {
@@ -50,7 +51,6 @@ section {
     /* width: 1000px; */
     /* max-width: 80%; */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: var(--gutter);
@@ -66,7 +66,7 @@ header {
     justify-content: space-between;
     background-color: rgb(164,14,0);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    box-shadow: rgb(54, 14, 0);
 }
 
 .header-container {
@@ -88,7 +88,7 @@ header {
 .nav-links {
     margin: 20px;
     color: rgb(243,182,0);
-    font-family: 'Imbue', serif;
+    font-family: 'Gentium Book Basic', serif;
     font-weight: 700;
     font-size: 40px;
 }
@@ -98,14 +98,14 @@ header {
     justify-content: flex-end;
     margin: auto;
     width: auto;
-    font-family: 'Imbue', serif;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .username {
     margin: 10px;
     color: rgb(243,182,0); 
     text-align: center;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 40px;
 }
 
@@ -113,7 +113,7 @@ header {
     margin: 10px;
     color: rgb(243,182,0); 
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 40px;
 }
 
@@ -124,9 +124,14 @@ header {
 }
 
 
-h2 {
-    font-size: 1.8rem;
+h2, .table-title {
+    font-size: 3rem;
     font-weight: bold;
+    margin: 10px;
+}
+
+h3, li, label, th {
+    font-size: 1.5rem;
 }
 
 .gutter-right {
@@ -137,69 +142,156 @@ h2 {
 header img {
     height: var(--header-height);
 }
-
-p {
-    margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
   
 .disabled {
     pointer-events: none;
 }
 
-
 #puzzle {
     position: relative;
     width: 1189.2px;
     height: 712.2px;
-    /* width: 1000px;
-    height: 599px; */
     background-size: cover;
+}
+
+#timer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1189.2px;
+    margin: -20px ;
+    padding: 0;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#time {
+    text-align: center;
+    width: 567.6px;
+    font-size: 30px;
+}
+
+.score-container {
+    margin-left: 280px;
+    font-size: 30px;
+}
+
+#score {
+    margin-right: 200px;
+    font-size: 30px;
+}
+
+#item-list {
+    margin:0;
+    padding: 0;
+    font-size: 20px;;
+    width: 1189.2px;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .clicky {
     position: absolute;
-
     z-index: 50;
     max-width: 100%;
     max-height: 100%;
-    /* border: 1px solid black; */
-    
-    /* width: 60% */
-    
 }
 
 .baby {
     cursor: pointer;
-
-
 }
 
 .clicky-image {
     opacity: 0;
     width: 60%;
-    /* display: none; */
 }
 
 .drop-shadow {
     filter: drop-shadow(5px 5px 5px hsl(180, 50%, 50%));
-
     opacity: 1;
-
 }
 
 .last-score {
     font-weight: bold;
+}
+
+.end-game-button {
+    font-size: xx-large;
+    margin-top: 950px;
+}
+
+.main-instructions {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+.left-instructions {
+    
+    width: 594.6px;
+    margin: 30px;
+    text-align: center;
+}
+
+.right-instructions {
+    width: 594.6px;
+    margin: 10px;
+    text-align: center;
+}
+
+.table-of-contents{
+    margin-bottom: 100px;
+    
+}
+
+.game-settings {
+    margin-top: 100px;
+    
+}
+
+.main-results {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
+    border: 1px solid black;
+}
+
+.left-results { 
+    width: 594.6px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+
+.table-title {
+    font-weight: bold;
+    margin: 10px;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 1px black solid;
+}
+
+td {
+    border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
+}
+
+.right-results {
+    width: 594.6px;
+    margin: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.play-again-button {
+    margin: 30px;
 }
 
 

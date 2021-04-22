@@ -73,8 +73,6 @@ game.puzzle = puzzle.id;
 //add puzzle id to game object so it can be referenced on results page 
 
 
-
-const elTitle = document.querySelector('#puzzle-title');
 const elPuzzle = document.querySelector('#puzzle');
 const scoreBox = document.querySelector('#timer');
 const currentScore = document.getElementById('score');
@@ -82,8 +80,6 @@ const mistakes = document.getElementById('WRONG');
 
 let correctClicks = 0;
 let score = pointTotal(game, correctClicks);
-
-elTitle.textContent = puzzle.title;
 
 // const image = document.createElement('img');
 // image.classList.add('puzzle-map');

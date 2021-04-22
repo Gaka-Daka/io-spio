@@ -123,13 +123,13 @@ header {
 }
 
 
-h2 {
+h2, .table-title {
     font-size: 3rem;
     font-weight: bold;
     margin: 10px;
 }
 
-h3, li, label {
+h3, li, label, th {
     font-size: 1.5rem;
 }
 
@@ -223,6 +223,7 @@ header img {
 .main-instructions {
     display: flex;
     flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .left-instructions {
@@ -251,6 +252,7 @@ header img {
 .main-results {
     display: flex;
     flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
     border: 1px solid black;
 }
 

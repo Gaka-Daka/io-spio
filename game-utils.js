@@ -7,7 +7,6 @@ export function createGame() {
         points: 0,
         difficulty: 'normal',
         time: (5 * 60)
-        //add default time/difficulty settings to user if none selected on config page
     };
     
     return game;

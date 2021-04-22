@@ -123,13 +123,13 @@ header {
 }
 
 
-h2 {
+h2, .table-title {
     font-size: 3rem;
     font-weight: bold;
     margin: 10px;
 }
 
-h3, li, label {
+h3, li, label, th {
     font-size: 1.5rem;
 }
 
@@ -223,6 +223,7 @@ header img {
 .main-instructions {
     display: flex;
     flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .left-instructions {
@@ -230,8 +231,6 @@ header img {
     width: 594.6px;
     margin: 30px;
     text-align: center;
-
-
 }
 
 .right-instructions {
@@ -239,6 +238,7 @@ header img {
     margin: 10px;
     text-align: center;
 }
+
 .table-of-contents{
     margin-bottom: 100px;
     
@@ -248,3 +248,49 @@ header img {
     margin-top: 100px;
     
 }
+
+.main-results {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
+    border: 1px solid black;
+}
+
+.left-results { 
+    width: 594.6px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+
+.table-title {
+    font-weight: bold;
+    margin: 10px;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 1px black solid;
+}
+
+td {
+    border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
+}
+
+.right-results {
+    width: 594.6px;
+    margin: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.play-again-button {
+    margin: 30px;
+}
+
+

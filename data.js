@@ -15,13 +15,6 @@ const cubbies = {
                 left: '43%'
             }
 
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'jack',
@@ -32,13 +25,6 @@ const cubbies = {
                 top: '60%',
                 left: '12.7%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -51,13 +37,6 @@ const cubbies = {
                 left: '66.3%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'arrows',
@@ -68,13 +47,6 @@ const cubbies = {
                 top: '65.2%',
                 left: '7.6%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -87,13 +59,6 @@ const cubbies = {
                 left: '44%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'ladybug',
@@ -104,13 +69,6 @@ const cubbies = {
                 top: '45.5%',
                 left: '55%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -123,13 +81,6 @@ const cubbies = {
                 left: '84%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'icecream',
@@ -140,13 +91,6 @@ const cubbies = {
                 top: '32%',
                 left: '78%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
 
@@ -170,14 +114,6 @@ const cats = {
                 top: '62.5%',
                 left: '66%'
             }
-
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'cat3',
@@ -188,13 +124,6 @@ const cats = {
                 top: '74%',
                 left: '20.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -207,13 +136,6 @@ const cats = {
                 left: '6.65%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'shell',
@@ -224,13 +146,6 @@ const cats = {
                 top: '61.5%',
                 left: '18.7%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
 
@@ -244,13 +159,6 @@ const cats = {
                 left: '16.5%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'button',
@@ -262,13 +170,6 @@ const cats = {
                 left: '82%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'cat2',
@@ -279,13 +180,6 @@ const cats = {
                 top: '49.5%',
                 left: '6.3%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
 
@@ -310,13 +204,6 @@ const whitespace = {
                 left: '19%'
             }
 
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'paperclip',
@@ -327,13 +214,6 @@ const whitespace = {
                 top: '85.5%',
                 left: '16.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -346,13 +226,6 @@ const whitespace = {
                 left: '50%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'shoe',
@@ -363,13 +236,6 @@ const whitespace = {
                 top: '63.5%',
                 left: '63.4%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -382,13 +248,6 @@ const whitespace = {
                 left: '65.5%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'fish',
@@ -399,13 +258,6 @@ const whitespace = {
                 top: '45%',
                 left: '87.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -418,13 +270,6 @@ const whitespace = {
                 left: '5.5%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'hat',
@@ -435,13 +280,6 @@ const whitespace = {
                 top: '16.5%',
                 left: '62.9%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
 

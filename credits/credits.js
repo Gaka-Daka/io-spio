@@ -1,6 +1,8 @@
-import { renderProfile } from '../utils.js';
+import { renderProfile, renderGuest } from '../utils.js';
 
-renderProfile();
+if (localStorage.getItem('LOGGED_IN') === null) {
+    renderGuest();
+} renderProfile();
 
 const kat = document.querySelector('.kat-photo');
 const daniella = document.querySelector('.d-photo');

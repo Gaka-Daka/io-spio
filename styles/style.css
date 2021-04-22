@@ -31,8 +31,9 @@ main {
     background-image: url('../assets/book.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 1650px 1250px;
+
     position: relative;
-    border: 15px blue solid;
     height: 100vh;
 }
 
@@ -42,7 +43,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 6rem 0rem 0rem 1.5rem;
+    margin: 0rem 0rem 0rem 1.2rem;
 }
 
 section {

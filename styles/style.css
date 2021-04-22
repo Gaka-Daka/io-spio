@@ -50,7 +50,6 @@ section {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(164,14,0);
     height: var(--header-height);
     box-shadow: rgb(54, 14, 0);
 }
@@ -204,7 +203,7 @@ header img {
 
 .end-game-button {
     font-size: xx-large;
-    margin-top: 950px;
+    position: absolute;
 }
 
 .main-instructions {

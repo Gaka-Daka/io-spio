@@ -15,9 +15,10 @@ body {
     --header-height: 100px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
-    --footer-height: 25px;
+    /* --footer-height: 25px; */
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-size: 1.5re; */
     background-color: var(--color2);
 }
 
@@ -33,6 +34,7 @@ main {
     /* position: relative; */
     /* border: 15px blue solid; */
     /* height: 100vh; */
+
 }
 
 section {
@@ -129,7 +131,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+/*   
 footer {
     position: fixed;
     width: 100%;
@@ -139,15 +141,16 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
-}
+} */
 
 .credits-background {
     width: 864px;
     height: 1066px;
-    margin-top: 70px;
+    /* margin-top: 100px; */
     background-image: url("../assets/mrzispy0018.jpeg");
     background-size: cover;
     position: relative;
+
 }
 
 .kat-photo {
@@ -169,4 +172,77 @@ footer {
     width: 27%;
     top: 3.5%;
     left: 39%;
+}
+
+.gabriel-photo {
+    position: absolute;
+    width: 16.5%;
+    top: 34.5%;
+    left: 28%;
+}
+
+
+.drop-shadow {
+    filter: drop-shadow(5px 5px 5px hsl(180, 50%, 50%));
+    opacity: 1;
+}
+
+.ispy-rhymes {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* background-image: url('../assets/bulletin.jpg'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    width: 100vw;
+}
+
+.bulletin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descriptions {
+    height: 500px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 30px; */
+}
+
+.left {
+    text-align: end;
+    justify-self: flex-end;
+}
+
+.right {
+    justify-self: flex-start;
+}
+
+.descriptions p {
+    border: 1px solid black;
+    padding: 20px;
+    height: 500px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.line-through {
+    text-decoration: line-through;
+
 }

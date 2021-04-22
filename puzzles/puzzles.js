@@ -7,7 +7,7 @@ renderProfile();
 
 
 function pointTotal(game, correctClicks) {
-    let score = (correctClicks * 100) - (game.misclicks * 10);
+    let score = (correctClicks * 110) - (game.misclicks * 10);
     return score;
 }
 //change game to get game because we created it in the config page
@@ -128,6 +128,7 @@ puzzle.hiddenObjects.forEach(object => {
         matchingIds.hasBeenFound = true;
         clickyClue.style.textDecoration = 'line-through';
         correctClicks++;
+        // game.misclicks++;
         score = pointTotal(game, correctClicks);
         currentScore.textContent = score;
         clicky.classList.add('disabled');

@@ -17,7 +17,7 @@ user.games.push(game);
 
 
 const button = document.querySelector('#play-again');
-console.log(button);
+
 const foundTable = document.querySelector('#found-table');
 const scoreBoard = document.querySelector('#scoreboard');
 
@@ -60,7 +60,8 @@ function addResultTableRow(user, game) {
     tdUser.textContent = user.username;
 
     const tdPuzzle = document.createElement('td');
-    tdPuzzle.textContent = game.puzzle;
+    const puzzleName = game.puzzle[0].toUpperCase() + game.puzzle.slice(1);
+    tdPuzzle.textContent = puzzleName;
 
     const tdScore = document.createElement('td');
     tdScore.textContent = game.points;

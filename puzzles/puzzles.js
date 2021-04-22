@@ -107,7 +107,7 @@ puzzle.hiddenObjects.forEach(object => {
         //end game logic
         //disabling clickies and image, add results button to redirect to results page, stop timer, and span appears...somewhere(hidden dani?) hi Dani :)
         //update game state with score --> push to localStorage
-        if (allClickiesFound()) {
+        if (allClickiesFound(game)) {
             doneFunction(game, score);
             clearInterval(myInterval);
         }

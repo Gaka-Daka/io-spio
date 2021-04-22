@@ -230,8 +230,6 @@ header img {
     width: 594.6px;
     margin: 30px;
     text-align: center;
-
-
 }
 
 .right-instructions {
@@ -239,6 +237,7 @@ header img {
     margin: 10px;
     text-align: center;
 }
+
 .table-of-contents{
     margin-bottom: 100px;
     
@@ -248,3 +247,46 @@ header img {
     margin-top: 100px;
     
 }
+
+.main-results {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+.left-results { 
+    width: 594.6px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+table{
+    border-bottom: 1px black solid;
+}
+
+.table-title {
+    font-weight: bold;
+    margin: 10px;
+}
+
+th {
+    font-weight: bold;
+}
+
+.right-results {
+    width: 594.6px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.play-again-button {
+    margin: 30px;
+}
+
+

@@ -1,3 +1,5 @@
+// Sourced from https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player
+
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
@@ -11,7 +13,7 @@ const cover = document.getElementById('cover');
 
 
 // Song titles
-const songs = ['Battle Against a Weird Opponent', 'Creative Exercise', 'Sales Dog', 'The Jolly Flying Man', 'Your Name, Please'];
+const songs = ['Battle Against a Weird Opponent', 'Creative Exercise', 'Sales Dog', 'The Jolly Flying Man', 'Your Name, Please', 'gourmet-race', 'Parade', 'Warioware', 'item-bounce', 'Bubblegum'];
 
 // Keep track of song
 let songIndex = 2;

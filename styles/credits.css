@@ -1,24 +1,11 @@
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
+  
     --header-height: 100px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
-    /* --footer-height: 25px; */
+  
     
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* font-size: 1.5re; */
     background: rgb(57,7,2);
     background: linear-gradient(0deg, rgba(57,7,2,1) 0%, rgba(164,15,0,1) 100%);}
   
@@ -29,19 +16,12 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
-    /* background-image: url('../assets/book.png'); */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* position: relative; */
-    /* border: 15px blue solid; */
-    /* height: 100vh; */
+   
     
 }
 
 section {
-    /* background-color: var(--color5); */
-    /* width: 1000px; */
-    /* max-width: 80%; */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,22 +112,11 @@ header img {
 p {
     margin: var(--gutter);
 }
-/*   
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-} */
+
 
 .credits-background {
     width: 864px;
     height: 1066px;
-    /* margin-top: 100px; */
     background-image: url("../assets/mrzispy0018.jpeg");
     background-size: cover;
     position: relative;
@@ -203,10 +172,6 @@ footer {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* background-image: url('../assets/bulletin.jpg'); */
-    /* background-size: contain;
-    background-repeat: no-repeat; */
-    /* height: 100vh; */
     width: 100vw;
 }
 
@@ -223,7 +188,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* margin: 30px; */
+   
 }
 
 .left {

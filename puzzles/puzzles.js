@@ -1,93 +1,56 @@
-import { findById, renderProfile } from '../utils.js';
+import { findById } from '../utils.js';
 import { puzzles } from '../data.js';
-import { updateGame, createGame, getGame } from '../game-utils.js';
+import { createGame, getGame } from '../game-utils.js';
 import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
+import { doneFunction, pointTotal, allClickiesFound } from './puzzles-utils.js';
+
 checkIfAUserIsLoggedIn();
-renderProfile();
 
-
-function pointTotal(game, correctClicks) {
-    let score = (correctClicks * 110) - (game.misclicks * 10);
-    return score;
-}
-//change game to get game because we created it in the config page
-let game = getGame();
-if (!game) {
-    game = createGame();
-
-    // if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
-}
-
-
-
-let duration = game.time;
-
-//change duration to be equal to the games time property. 5 minutes by default
+const params = new URLSearchParams(window.location.search);
+const clues = document.querySelector('#item-list');
+const puzzleId = params.get('id');
+const puzzle = findById(puzzles, puzzleId);
+const elPuzzle = document.querySelector('#puzzle');
+const scoreBox = document.querySelector('#timer');
+const currentScore = document.getElementById('score');
 const display = document.querySelector('#time');
 
-let timer = duration, minutes, seconds;
+//change game to get game because we created it in the config page
+let game = getGame();
+// if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
+if (!game) {
+    game = createGame();
+}
 
+//add puzzle id to game object so it can be referenced on results page 
+game.puzzle = puzzle.id;
+elPuzzle.style.backgroundImage = `url(${puzzle.image}`;
+
+//intialize score/click state
+let correctClicks = 0;
+let score = pointTotal(game, correctClicks);
+
+
+//Timer Config
+//sourced from: https://jsfiddle.net/wr1ua0db/17/
+//change duration to be equal to the games time property. 5 minutes by default
+let duration = game.time;
+let timer = duration, minutes, seconds;
 let myInterval = setInterval(function () { //eslint-disable-line
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
-
     display.textContent = minutes + ':' + seconds;
 
+    //when timer is finished, clears interval and ends game
     if (--timer < 0) {
-        doneFunction();
+        doneFunction(game, score);
+        clearInterval(myInterval);
     }
 }, 1000);
-//sourced from: https://jsfiddle.net/wr1ua0db/17/
 
-function doneFunction() {
-    const endGameSpan = document.createElement('span');
-    const moveOn = document.createElement('button');
-    moveOn.classList.add('end-game-button');
-    moveOn.textContent = 'Go to Results';
-
-    const clickies = document.querySelectorAll('.clicky');
-    for (let clicky of clickies) {
-        clicky.classList.add('disabled');
-    }
-    // image.classList.add('disabled');
-
-    moveOn.addEventListener('click', () => {
-        window.location = '../results/index.html';
-    });
-
-    elPuzzle.append(endGameSpan, moveOn);
-    clearInterval(myInterval);
-    game.points = score;
-    updateGame(game);
-}
-
-const params = new URLSearchParams(window.location.search);
-const clues = document.querySelector('#item-list');
-const puzzleId = params.get('id');
-const puzzle = findById(puzzles, puzzleId);
-
-game.puzzle = puzzle.id;
-//add puzzle id to game object so it can be referenced on results page 
-
-
-const elPuzzle = document.querySelector('#puzzle');
-const scoreBox = document.querySelector('#timer');
-const currentScore = document.getElementById('score');
-
-let correctClicks = 0;
-let score = pointTotal(game, correctClicks);
-
-// const image = document.createElement('img');
-// image.classList.add('puzzle-map');
-// image.src = puzzle.image;
-
-//adding background image to section
-elPuzzle.style.backgroundImage = `url(${puzzle.image}`;
-
-// image.style.width = '1000px';
 
 puzzle.hiddenObjects.forEach(object => {
     game.foundObjects.push({
@@ -105,7 +68,6 @@ puzzle.hiddenObjects.forEach(object => {
     clickyImg.classList.add('clicky-image');
 
     clickyImg.src = object.image;
-    // clicky.img = object.img;
     clicky.style.top = object.map.top;
     clicky.style.left = object.map.left;
 
@@ -119,21 +81,24 @@ puzzle.hiddenObjects.forEach(object => {
 
 
     clicky.addEventListener('click', () => {
+        
         const matchingIds = findById(game.foundObjects, object.id);
         matchingIds.hasBeenFound = true;
         clickyClue.style.textDecoration = 'line-through';
         correctClicks++;
-        // game.misclicks++;
         score = pointTotal(game, correctClicks);
         currentScore.textContent = score;
         clicky.classList.add('disabled');
         clickyImg.classList.add('drop-shadow');
-        if (allClickiesFound()) doneFunction();
+        
+        if (allClickiesFound()) {
+            doneFunction(game, score); 
+            clearInterval(myInterval);
+        }
 
     });
 
     elPuzzle.append(clicky);
-    // elPuzzle.append(clicky, clickyImg);
     scoreBox.append(currentScore);
 
 });
@@ -145,16 +110,4 @@ elPuzzle.addEventListener('click', () => {
     currentScore.textContent = score;
 });
 
-// elPuzzle.append(image);
-
-//function to cause push of misclicks after timer runs out or all items found
-function allClickiesFound() {
-
-    for (let foundObject of game.foundObjects) {
-        if (foundObject.hasBeenFound !== true) {
-            return false;
-        }
-    }
-    return true;
-}
 

@@ -1,9 +1,13 @@
 import { logIn, createUser, userExists, correctLogin } from '../local-storage-utils.js';
 
 const signupForm = document.querySelector('#signup-form');
-const signupSection = document.querySelector('.sign-up');
+const signupSection = document.querySelector('.sign-up'); 
+const loginForm = document.querySelector('#login-form');
+const loginSection = document.querySelector('.login');
+
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    
     const formData = new FormData(signupForm);
     const username = formData.get('username');
     const password = formData.get('password');
@@ -20,13 +24,9 @@ signupForm.addEventListener('submit', (e) => {
     
 });
 
-
-
-const loginForm = document.querySelector('#login-form');
-
-const loginSection = document.querySelector('.login');
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    
     const formData = new FormData(loginForm);
     const username = formData.get('username');
     const password = formData.get('password');

@@ -32,7 +32,6 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1650px 1250px;
-
     position: relative;
     height: 90vh;
 }
@@ -88,7 +87,7 @@ header {
 .nav-links {
     margin: 20px;
     color: rgb(243,182,0);
-    font-family: 'Imbue', serif;
+    font-family: 'Gentium Book Basic', serif;
     font-weight: 700;
     font-size: 40px;
 }
@@ -98,14 +97,14 @@ header {
     justify-content: flex-end;
     margin: auto;
     width: auto;
-    font-family: 'Imbue', serif;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .username {
     margin: 10px;
     color: rgb(243,182,0); 
     text-align: center;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 40px;
 }
 
@@ -113,7 +112,7 @@ header {
     margin: 10px;
     color: rgb(243,182,0); 
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 40px;
 }
 
@@ -146,41 +145,43 @@ header img {
     position: relative;
     width: 1189.2px;
     height: 712.2px;
-    /* width: 1000px;
-    height: 599px; */
     background-size: cover;
 }
 
 #timer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 1189.2px;
-    margin: 0;
+    margin: -20px ;
     padding: 0;
+    font-family: 'Gentium Book Basic', serif;
     font-size: larger;
+    font-weight: bolder;
 }
 
 #time {
     text-align: center;
+    width: 567.6px;
+    font-size: 30px;
 }
 
 .score-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    margin-left: 280px;
+    font-size: 30px;
 }
 
 #score {
-    text-align: center;
+    margin-right: 200px;
+    font-size: 30px;
 }
 
 #item-list {
     margin:0;
     padding: 0;
-    font-size: large;
+    font-size: 20px;;
     width: 1189.2px;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .clicky {

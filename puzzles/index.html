@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Puzzle</title>
 </head>
 
@@ -19,24 +21,31 @@
 
     </header>
     <main>
-        <section id="puzzle-title">
+        <div id="puzzle-container">
+            <section id="timer">
+                <span id="time">
 
-        </section>
-        <section id="timer">
-            <div><span id="time">05:00</span></div>
-            <div>Score:<span id="score"></span></div>
-            <div><span id="WRONG"></span></div>
-            <!-- timer, score -->
-        </section>
+                </span>
+                <div class="score-container">
+                    Score:
+                    <span id="score">
 
-        <section id="puzzle">
-            <!-- rendered in js -->
-        </section>
+                    </span>
+                </div>
+                <!-- timer, score -->
+            </section>
 
-        <section id="item-list">
-            I Spy
-            <!-- rendered in js -->
-        </section>
+            <section id="puzzle">
+                <!-- rendered in js -->
+            </section>
+
+            <section id="item-list">
+                I Spy
+                <!-- rendered in js -->
+            </section>
+            <div id="results-button"></div>
+        </div>
+
     </main>
     <footer>
 

@@ -15,13 +15,6 @@ const cubbies = {
                 left: '43%'
             }
 
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'jack',
@@ -32,13 +25,6 @@ const cubbies = {
                 top: '60%',
                 left: '12.7%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -51,13 +37,6 @@ const cubbies = {
                 left: '66.3%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'arrows',
@@ -68,13 +47,6 @@ const cubbies = {
                 top: '65.2%',
                 left: '7.6%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -87,17 +59,10 @@ const cubbies = {
                 left: '44%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'ladybug',
-            clue: 'a red ladybug',
+            clue: 'a red ladybug,',
             description: 'a red ladybug',
             image: '../assets/cubbies/ladybug.png',
             map: {
@@ -105,17 +70,10 @@ const cubbies = {
                 left: '55%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'rug',
-            clue: 'a Persian rug',
+            clue: 'a Persian rug,',
             description: 'a Persian rug',
             image: '../assets/cubbies/rug.png',
             map: {
@@ -123,30 +81,16 @@ const cubbies = {
                 left: '84%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'icecream',
-            clue: 'an ice cream cone',
+            clue: 'an ice cream cone.',
             description: 'an ice cream cone',
             image: '../assets/cubbies/icecream.png',
             map: {
                 top: '32%',
                 left: '78%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
 
@@ -170,14 +114,6 @@ const cats = {
                 top: '62.5%',
                 left: '66%'
             }
-
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'cat3',
@@ -188,13 +124,6 @@ const cats = {
                 top: '74%',
                 left: '20.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -207,13 +136,6 @@ const cats = {
                 left: '6.65%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'shell',
@@ -225,15 +147,8 @@ const cats = {
                 left: '18.7%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
-        
+
         {
             id: 'horse',
             clue: 'a horse that rocks,',
@@ -243,13 +158,6 @@ const cats = {
                 top: '39.3%',
                 left: '16.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -262,13 +170,6 @@ const cats = {
                 left: '82%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'cat2',
@@ -280,15 +181,8 @@ const cats = {
                 left: '6.3%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
-        
+
     ],
 
 
@@ -310,13 +204,6 @@ const whitespace = {
                 left: '19%'
             }
 
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'paperclip',
@@ -327,13 +214,6 @@ const whitespace = {
                 top: '85.5%',
                 left: '16.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -346,13 +226,6 @@ const whitespace = {
                 left: '50%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'shoe',
@@ -363,13 +236,6 @@ const whitespace = {
                 top: '63.5%',
                 left: '63.4%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -382,13 +248,6 @@ const whitespace = {
                 left: '65.5%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'fish',
@@ -399,13 +258,6 @@ const whitespace = {
                 top: '45%',
                 left: '87.5%'
             }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
 
         },
         {
@@ -418,13 +270,6 @@ const whitespace = {
                 left: '5.5%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
         {
             id: 'hat',
@@ -436,178 +281,16 @@ const whitespace = {
                 left: '62.9%'
             }
 
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
         },
 
     ],
 
 
 };
-const beads = {
 
-    id: 'beads',
-    title: 'Bead Explosion',
-    image: '../assets/beads/bead-explosion.jpeg',
-
-    hiddenObjects: [
-        {
-            id: 'banana',
-            clue: 'a beady banana,',
-            description: 'a banana',
-            image: '../assets/beads/banana.png',
-            map: {
-                top: '50%',
-                left: '50%'
-            }
-
-            // dimensions: {
-            //     width: '200',
-            //     height: '200',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'teddy-bear',
-            clue: 'a smiling teddy bear,',
-            description: 'a yellow teddy bear',
-            image: '../assets/beads/teddy-bear.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'squirrel',
-            clue: 'a little squirrel,',
-            description: 'a little squirrel',
-            image: '../assets/beads/squirrel.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'giraffe',
-            clue: 'a lost giraffe,',
-            description: 'a silver giraffe',
-            image: '../assets/beads/giraffe.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'dragonfly',
-            clue: 'a dragonfly',
-            description: 'a dragonfly',
-            image: '../assets/beads/dragonfly.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'teddy-bear2',
-            clue: 'a tied up bear',
-            description: 'a teddybear with a red bow',
-            image: '../assets/beads/teddy-bear2.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'telephone',
-            clue: 'a silver telephone',
-            description: 'a silver telephone',
-            image: '../assets/beads/telephone.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-        {
-            id: 'fan',
-            clue: 'a bead fan',
-            description: 'a small blue fan',
-            image: '../assets/beads/fan.png',
-            map: {
-                top: '0%',
-                left: '0%'
-            }
-
-            // dimensions: {
-            //     width: '',
-            //     height: '',
-            //     borderRadius: ''
-            // }
-
-
-        },
-
-    ],
-
-
-};
 export const puzzles = [
     cubbies,
     cats,
     whitespace,
-    beads
+   
 ];

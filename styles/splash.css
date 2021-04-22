@@ -1,0 +1,82 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
+  
+}
+
+
+section {
+    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    border: solid 2px var(--color1);
+}
+
+.home {
+    background-color: rgb(159, 40, 22);
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/bead-explosion.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.home-page {
+    display: flex;
+    align-items: center;
+}
+.buttons-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 220px;
+    height: 200px;
+    border-radius: 35px;
+    border: 2px solid rgb(159, 40, 22);
+    position: absolute;
+    margin-bottom: 100px;
+}
+
+#new-user {
+    margin: auto;
+}
+
+button {
+    
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid rgb(243,182,0);
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+    color:rgb(159, 40, 22)
+}
+
+button:hover {
+    background: rgb(243,182,0);
+    color: white;
+    
+}
+

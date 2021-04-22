@@ -39,3 +39,9 @@ form.addEventListener('submit', (event) => {
     updateGame(game);
 
 });
+
+const audioButton = document.getElementById('audio');
+
+audioButton.addEventListener('click', () => {
+    window.open('../music', 'popUpWindow', 'height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+});

@@ -1,0 +1,29 @@
+.credits-background {
+    width: 864px;
+    height: 1066px;
+    margin-top: 70px;
+    background-image: url("../assets/mrzispy0018.jpeg");
+    background-size: cover;
+    position: relative;
+}
+
+.kat-photo {
+    position: absolute;
+    width: 14.75%;
+    top: 54.2%;
+    left: 18.1%;
+}
+
+.d-photo {
+    position: absolute;
+    width: 15.5%;
+    top: 85.5%;
+    left: 14%;
+}
+
+.kalan-photo {
+    position: absolute;
+    width: 27%;
+    top: 3.5%;
+    left: 39%;
+}

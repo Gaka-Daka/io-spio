@@ -14,7 +14,12 @@ const game = getGame();
 
 user.games.push(game);
 
+// const minutesToComplete = Math.floor(game.completeTime / 60);
+// const secondsToComplete = Math.floor((game.completeTime % 60) - 1);
 
+// console.log(minutesToComplete, secondsToComplete);
+// const timeToComplete = `${minutesToComplete} Minutes and ${secondsToComplete} seconds`;
+// console.log(timeToComplete);
 
 const button = document.querySelector('#play-again');
 

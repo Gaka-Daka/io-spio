@@ -26,7 +26,7 @@ let duration = game.time;
 const display = document.querySelector('#time');
 
 let timer = duration, minutes, seconds;
-
+// game.completeTime = 0;
 let myInterval = setInterval(function () { //eslint-disable-line
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
@@ -35,7 +35,8 @@ let myInterval = setInterval(function () { //eslint-disable-line
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
     display.textContent = minutes + ':' + seconds;
-
+    game.completeTime++;
+    
     if (--timer < 0) {
         doneFunction();
     }

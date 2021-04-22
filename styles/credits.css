@@ -150,6 +150,7 @@ footer {
     background-image: url("../assets/mrzispy0018.jpeg");
     background-size: cover;
     position: relative;
+    border-radius: 10px;
 
 }
 

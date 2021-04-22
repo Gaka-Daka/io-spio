@@ -201,9 +201,19 @@ header img {
     font-weight: bold;
 }
 
+#results-button {
+    width: 1189.2px;
+    display: flex;
+    justify-content: center;
+}
+
 .end-game-button {
     font-size: xx-large;
     position: absolute;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-instructions {

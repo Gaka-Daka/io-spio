@@ -51,59 +51,74 @@ let myInterval = setInterval(function () { //eslint-disable-line
     }
 }, 1000);
 
-
+//for each hidden object, create foundobjects array - to push into localStorage later
 puzzle.hiddenObjects.forEach(object => {
     game.foundObjects.push({
         id: object.id,
         hasBeenFound: false
     });
 
+    //render clues into item list below puzzle image
     const clickyClue = document.createElement('span');
     clickyClue.textContent = object.clue;
 
     clues.append(clickyClue);
 
-    const clicky = document.createElement('div');
+    //create clickies div
+    const clickyDiv = document.createElement('div');
+    clickyDiv.style.top = object.map.top;
+    clickyDiv.style.left = object.map.left;
+
+    //create clickies image
     const clickyImg = document.createElement('img');
     clickyImg.classList.add('clicky-image');
-
     clickyImg.src = object.image;
-    clicky.style.top = object.map.top;
-    clicky.style.left = object.map.left;
 
-    clicky.append(clickyImg);
-    clicky.classList.add('clicky');
+    //put img into clickies div
+    clickyDiv.append(clickyImg);
+    clickyDiv.classList.add('clicky');
 
-
+    //default is normal, BUT if baby difficulty is selected, add baby properties
     if (game.difficulty === 'baby') {
-        clicky.classList.add('baby');
+        clickyDiv.classList.add('baby');
     }
 
+    //clicky game logic
+    clickyDiv.addEventListener('click', () => {
 
-    clicky.addEventListener('click', () => {
-        
+        //matching 'localStorage' data to whatever clicky is selected (current object from data - on line 55)
         const matchingIds = findById(game.foundObjects, object.id);
+
+        //change hasBeenFound in 'localStorage' property to true
         matchingIds.hasBeenFound = true;
+
+        //when clicky is selected, CSS cross out in item list, outline and disable clicky
         clickyClue.style.textDecoration = 'line-through';
+        clickyDiv.classList.add('disabled');
+        clickyImg.classList.add('drop-shadow');
+
+        //increment correctClicks state
         correctClicks++;
+
+        //calculate pointTotal and display on page
         score = pointTotal(game, correctClicks);
         currentScore.textContent = score;
-        clicky.classList.add('disabled');
-        clickyImg.classList.add('drop-shadow');
-        
+
+        //end game logic
+        //disabling clickies and image, add results button to redirect to results page, stop timer, and span appears...somewhere(hidden dani?) hi Dani :)
+        //update game state with score --> push to localStorage
         if (allClickiesFound()) {
-            doneFunction(game, score); 
+            doneFunction(game, score);
             clearInterval(myInterval);
         }
-
     });
 
-    elPuzzle.append(clicky);
+    elPuzzle.append(clickyDiv);
     scoreBox.append(currentScore);
-
 });
 
-//changed image to elPuzzle
+//game logic, part 2
+//update score with misclicks
 elPuzzle.addEventListener('click', () => {
     game.misclicks++;
     score = pointTotal(game, correctClicks);

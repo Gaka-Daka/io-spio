@@ -129,7 +129,7 @@ h2 {
     margin: 10px;
 }
 
-h3 {
+h3, li, label {
     font-size: 1.5rem;
 }
 
@@ -216,6 +216,7 @@ header img {
 
 .end-game-button {
     font-size: xx-large;
+    margin-top: 950px;
 }
 
 .main-instructions {

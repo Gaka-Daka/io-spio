@@ -265,9 +265,6 @@ header img {
     border: 1px solid black;
 }
 
-table{
-    border-bottom: 1px black solid;
-}
 
 .table-title {
     font-weight: bold;
@@ -276,6 +273,11 @@ table{
 
 th {
     font-weight: bold;
+    border-bottom: 1px black solid;
+}
+
+td {
+    border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
 }
 
 .right-results {

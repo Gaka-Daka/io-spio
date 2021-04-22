@@ -124,8 +124,13 @@ header {
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .gutter-right {
@@ -213,4 +218,30 @@ header img {
     font-size: xx-large;
 }
 
+.main-instructions {
+    display: flex;
+    flex-direction: row;
+}
 
+.left-instructions {
+    
+    width: 594.6px;
+    margin: 30px;
+    text-align: center;
+
+}
+
+.right-instructions {
+    width: 594.6px;
+    margin: 10px;
+    text-align: center;
+}
+.table-of-contents{
+    margin-bottom: 100px;
+    
+}
+
+.game-settings {
+    margin-top: 100px;
+    
+}

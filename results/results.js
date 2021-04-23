@@ -25,7 +25,6 @@ for (let gameItem of game.foundObjects) {
         const tr = addTableRow(matchingItem);
         foundTable.append(tr);
     }
-
 }
 
 for (let game of user.games) {

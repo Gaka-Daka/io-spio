@@ -103,7 +103,6 @@ header {
 }
 
 .logout-button {
-    height: 30px;
     justify-content: center;
     margin: auto;
 }
@@ -223,7 +222,6 @@ header img {
 }
 
 .left-instructions {
-    
     width: 594.6px;
     margin: 30px;
     text-align: center;
@@ -249,7 +247,6 @@ header img {
     display: flex;
     flex-direction: row;
     font-family: 'Gentium Book Basic', serif;
-    border: 1px solid black;
 }
 
 .left-results { 
@@ -258,7 +255,6 @@ header img {
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
 }
 
 
@@ -290,3 +286,20 @@ td {
 }
 
 
+button {
+    
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid rgb(243,182,0);
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+    color:rgb(159, 40, 22)
+}
+
+button:hover {
+    background: rgb(243,182,0);
+    color: white;
+    
+}

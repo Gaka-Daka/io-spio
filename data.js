@@ -84,7 +84,7 @@ const cubbies = {
         },
         {
             id: 'icecream',
-            clue: 'an ice cream cone.',
+            clue: 'and an ice cream cone.',
             description: 'an ice cream cone',
             image: '../assets/cubbies/icecream.png',
             map: {
@@ -173,7 +173,7 @@ const cats = {
         },
         {
             id: 'cat2',
-            clue: 'a cat that hisses',
+            clue: 'and a cat that hisses.',
             description: 'a hissing cat',
             image: '../assets/cats/cat2.png',
             map: {
@@ -218,7 +218,7 @@ const whitespace = {
         },
         {
             id: 'spider',
-            clue: 'a black spider,',
+            clue: `a black spider,`,
             description: 'a spider',
             image: '../assets/whitespace/spider.png',
             map: {
@@ -229,7 +229,7 @@ const whitespace = {
         },
         {
             id: 'shoe',
-            clue: 'a pink baby shoe,',
+            clue: 'a pink baby shoe, ',
             description: 'a pink shoe',
             image: '../assets/whitespace/shoe.png',
             map: {
@@ -273,7 +273,7 @@ const whitespace = {
         },
         {
             id: 'hat',
-            clue: 'a hat that\'s blue',
+            clue: 'and a hat that\'s blue.',
             description: 'a blue hat',
             image: '../assets/whitespace/hat.png',
             map: {

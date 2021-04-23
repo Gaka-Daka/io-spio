@@ -1,4 +1,4 @@
-import { findById } from '../utils.js';
+import { findById, displayTime } from '../utils.js';
 import { puzzles } from '../data.js';
 import { createGame, getGame } from '../game-utils.js';
 import { checkIfAUserIsLoggedIn } from '../local-storage-utils.js';
@@ -32,25 +32,32 @@ let score = pointTotal(game, correctClicks);
 
 
 //Timer Config
-//sourced from: https://jsfiddle.net/wr1ua0db/17/
-//change duration to be equal to the games time property. 5 minutes by default
 game.completeTime = 0;
+//initialize game objects complete time property so we can reference it when rendering results results. It will track every second elapsed after starting the timer.
 let duration = game.time;
-let timer = duration, minutes, seconds;
-let myInterval = setInterval(function () { //eslint-disable-line
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
 
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    display.textContent = minutes + ':' + seconds;
+
+   
+//start an interval that will display the seconds passed into it as minutes and seconds.
+let myInterval = setInterval(function() {  
+
+    const timeDisplay = displayTime(duration);
+    //turn the duration into a string of minutes and seconds
+    --duration;
+    //decrement the duration every second
     game.completeTime++;
-    //when timer is finished, clears interval and ends game
-    if (--timer < 0) {
+    //increment the game objects completed time property every second
+    display.textContent = timeDisplay;
+    //update the display to reflect the current time as minutes and seconds   
+    if (duration < 0) {
         doneFunction(game, score);
         clearInterval(myInterval);
     }
+          
 }, 1000);
+
+//inpired by https://jsfiddle.net/wr1ua0db/17/
+
 
 //for each hidden object, create foundobjects array - to push into localStorage later
 puzzle.hiddenObjects.forEach(object => {

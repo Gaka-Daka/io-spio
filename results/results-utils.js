@@ -1,3 +1,5 @@
+import { displayTime } from '../utils.js';
+
 export function addTableRow(matchingItem) {
     const tr = document.createElement('tr');
     const tdFoundObject = document.createElement('td');
@@ -13,26 +15,10 @@ export function addTableRow(matchingItem) {
 }
 
 
-function minutesSecond(time) {
-    let minutes = Math.floor(time / 60);
 
-
-    let seconds = Math.floor(time % 60);
-
-    
-    
-    if (minutes < 10){
-        minutes = '0' + minutes;
-    } 
-    if (seconds < 10){
-        seconds = '0' + seconds;
-    }
-    const display = minutes + ':' + seconds; 
-    return display;
-}
 
 export function addResultTableRow(user, game) {
-  
+    
     
     const tr = document.createElement('tr');
     tr.classList.add('scores');
@@ -48,12 +34,13 @@ export function addResultTableRow(user, game) {
 
     const tdDifficulty = document.createElement('td');
     tdDifficulty.textContent = game.difficulty;
-
-    const completeTime = minutesSecond(game.completeTime);
-    // const minutesToComplete = Math.floor(game.completeTime / 60);
-    // const secondsToComplete = Math.floor((game.completeTime % 60) - 1);
+    //save complete time as a string of minutes and seconds by passing it into the display time function
+    //the complete time property on the game is always one second ahead of the timer. so subtract one.
+    const completeTime = displayTime(game.completeTime - 1);
+    
     
     const tdCompleteTime = document.createElement('td');
+    //check if the complete time is greater than or equal to total time alloted for a puzzle. If it is return incomplete instead of a time
     if (game.completeTime >= game.time) {
         
         tdCompleteTime.textContent = 'Incomplete';

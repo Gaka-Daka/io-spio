@@ -173,6 +173,7 @@ header img {
     padding: 0;
     font-size: 20px;;
     width: 1189.2px;
+    display: inline;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -254,10 +255,13 @@ header img {
     width: 594.6px;
     margin: 30px;
     text-align: center;
+    height: 712.2px;
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    overflow: auto;
+    
 }
-
 
 .table-title {
     font-weight: bold;
@@ -266,7 +270,7 @@ header img {
 
 th {
     font-weight: bold;
-    border-bottom: 1px black solid;
+    border-bottom: 1px black solid;    
 }
 
 td {
@@ -277,9 +281,10 @@ td {
     width: 594.6px;
     margin: 10px;
     text-align: center;
-
+    height: 712.2px;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .play-again-button {

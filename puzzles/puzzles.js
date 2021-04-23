@@ -34,6 +34,7 @@ let score = pointTotal(game, correctClicks);
 //Timer Config
 //sourced from: https://jsfiddle.net/wr1ua0db/17/
 //change duration to be equal to the games time property. 5 minutes by default
+game.completeTime = 0;
 let duration = game.time;
 let timer = duration, minutes, seconds;
 let myInterval = setInterval(function () { //eslint-disable-line
@@ -43,7 +44,7 @@ let myInterval = setInterval(function () { //eslint-disable-line
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     display.textContent = minutes + ':' + seconds;
-
+    game.completeTime++;
     //when timer is finished, clears interval and ends game
     if (--timer < 0) {
         doneFunction(game, score);

@@ -1,4 +1,4 @@
-// import { renderProfile } from "./utils";
+import { renderProfile } from './utils.js';
 
 const USER = 'USER';
 const LOGGED_IN = 'LOGGED_IN';
@@ -52,13 +52,11 @@ export function logout() {
 }
 
 
-
-
 export function checkIfAUserIsLoggedIn() {
     const logged_in = localStorage.getItem('LOGGED_IN');
 
     if (!logged_in) {
         window.location = '../index.html';
-    } else return;
+    } else return renderProfile();
 }
 

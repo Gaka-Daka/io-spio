@@ -189,7 +189,7 @@ header img {
 }
 
 .clicky-image {
-    opacity: 0;
+    /* opacity: 0; */
     width: 60%;
 }
 

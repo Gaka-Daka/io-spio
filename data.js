@@ -222,8 +222,8 @@ const whitespace = {
             description: 'a spider',
             image: '../assets/whitespace/spider.png',
             map: {
-                top: '50%',
-                left: '50%'
+                top: '67.5%',
+                left: '37%',
             }
 
         },

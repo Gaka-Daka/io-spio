@@ -39,8 +39,8 @@ updateUser(user);
 const allScores = document.querySelectorAll('.scores');
 const mostRecentScore = allScores[allScores.length - 1];
 mostRecentScore.classList.add('last-score');
-
+localStorage.removeItem('GAME');
 button.addEventListener('click', () => {
-    localStorage.removeItem('GAME');
+    
     window.location = '../game-config/index.html';
 });

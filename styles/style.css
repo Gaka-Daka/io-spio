@@ -258,9 +258,17 @@ header img {
     height: 712.2px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    overflow: auto;
+    /* border: 1px solid black; */
+    /* overflow: auto; */
     
+}
+
+.results-wrap {
+    overflow: auto;
+    width: 450px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
 }
 
 .table-title {
@@ -284,7 +292,7 @@ td {
     height: 712.2px;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .play-again-button {

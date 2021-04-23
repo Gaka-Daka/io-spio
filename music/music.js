@@ -13,7 +13,19 @@ const cover = document.getElementById('cover');
 
 
 // Song titles
-const songs = ['Battle Against a Weird Opponent', 'Creative Exercise', 'Sales Dog', 'The Jolly Flying Man', 'Your Name, Please', 'gourmet-race', 'Parade', 'Warioware', 'item-bounce', 'Bubblegum'];
+const songs = [
+    'Battle Against a Weird Opponent', 
+    'Creative Exercise', 
+    'Sales Dog', 
+    'The Jolly Flying Man', 
+    'Your Name, Please', 
+    'gourmet-race', 
+    'Parade', 
+    'Warioware', 
+    'item-bounce', 
+    'Bubblegum', 
+    'Shooting Gallery'
+];
 
 // Keep track of song
 let songIndex = 2;

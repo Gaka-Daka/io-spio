@@ -121,7 +121,7 @@ p {
     background-size: cover;
     position: relative;
     border-radius: 10px;
-
+    border: 10px rgb(243,182,0) solid;
 }
 
 .kat-photo {
@@ -161,7 +161,7 @@ p {
 .ispy-rhymes {
     margin: 0;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 60%;
 }
 
@@ -201,12 +201,13 @@ main {
 }
 
 .descriptions p {
-    border: 2px solid orange;
+    border: 10px solid  rgb(243,182,0) ;
     padding: 20px;
-    height: 200px;
+    height: 300px;
     width: 300px;
     border-radius: 5px;
     background-color: white;
+    text-align: center;
 }
 
 .hidden {
@@ -216,4 +217,10 @@ main {
 .line-through {
     text-decoration: line-through;
 
+}
+
+a {
+    cursor: pointer;
+    text-align: center;
+ 
 }

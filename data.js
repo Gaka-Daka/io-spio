@@ -22,8 +22,8 @@ const cubbies = {
             description: 'a small silver jack',
             image: '../assets/cubbies/jack.png',
             map: {
-                top: '60%',
-                left: '12.7%'
+                top: '59.5%',
+                left: '12.5%'
             }
 
         },
@@ -66,7 +66,7 @@ const cubbies = {
             description: 'a red ladybug',
             image: '../assets/cubbies/ladybug.png',
             map: {
-                top: '45.5%',
+                top: '44.5%',
                 left: '55%'
             }
 

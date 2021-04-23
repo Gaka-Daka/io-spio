@@ -309,3 +309,30 @@ button:hover {
     color: white;
     
 }
+
+#confirm {
+    margin: 20px;
+    /* display: block; */
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.game-settings-wrap {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}

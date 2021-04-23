@@ -13,6 +13,8 @@ export function addTableRow(matchingItem) {
 }
 
 export function addResultTableRow(user, game) {
+  
+    
     const tr = document.createElement('tr');
     tr.classList.add('scores');
     const tdUser = document.createElement('td');
@@ -28,7 +30,20 @@ export function addResultTableRow(user, game) {
     const tdDifficulty = document.createElement('td');
     tdDifficulty.textContent = game.difficulty;
 
-    tr.append(tdUser, tdPuzzle, tdDifficulty, tdScore);
+    const minutesToComplete = Math.floor(game.completeTime / 60);
+    const secondsToComplete = Math.floor((game.completeTime % 60) - 1);
+    
+    const tdCompleteTime = document.createElement('td');
+    if (game.completeTime >= game.time) {
+        
+        tdCompleteTime.textContent = 'Incomplete';
+    } else {
+        tdCompleteTime.textContent = `${minutesToComplete}:${secondsToComplete}`;
+    }
+    
+
+   
+    tr.append(tdUser, tdPuzzle, tdDifficulty, tdCompleteTime, tdScore);
 
     return tr;
 }

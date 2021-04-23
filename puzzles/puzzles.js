@@ -49,7 +49,7 @@ let myInterval = setInterval(function() {
     //increment the game objects completed time property every second
     display.textContent = timeDisplay;
     //update the display to reflect the current time as minutes and seconds   
-    if (duration <= 0) {
+    if (duration < 0) {
         doneFunction(game, score);
         clearInterval(myInterval);
     }

@@ -6,7 +6,7 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: rgb(57,7,2);
     background: linear-gradient(0deg, rgba(57,7,2,1) 0%, rgba(164,15,0,1) 100%);
 }
@@ -52,7 +52,7 @@ header {
     justify-content: space-between;
     background-color: rgb(164,14,0);
     height: var(--header-height);
-    box-shadow: rgb(54, 14, 0);
+    box-shadow: var(--shadow);
 }
 
 .header-container {
@@ -74,7 +74,7 @@ header {
 .nav-links {
     margin: 20px;
     color: rgb(243,182,0);
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
     font-size: 40px;
 }
@@ -84,7 +84,7 @@ header {
     justify-content: flex-end;
     margin: auto;
     width: auto;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .username {
@@ -104,7 +104,6 @@ header {
 }
 
 .logout-button {
-    height: 30px;
     justify-content: center;
     margin: auto;
 }
@@ -146,9 +145,9 @@ header img {
     justify-content: center;
     align-items: center;
     width: 1189.2px;
-    margin: -20px ;
-    padding: 0;
-    font-family: 'Gentium Book Basic', serif;
+    margin: -50px ;
+    padding-top: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     font-weight: bolder;
 }
@@ -170,11 +169,13 @@ header img {
 }
 
 #item-list {
-    margin:0;
-    padding: 0;
-    font-size: 20px;;
+    margin-top: -20px;
+    padding: 0px;
+    font-size: 25px;;
+    text-align: center;
     width: 1189.2px;
-    font-family: 'Gentium Book Basic', serif;
+    display: inline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .clicky {
@@ -189,7 +190,7 @@ header img {
 }
 
 .clicky-image {
-    opacity: 0;
+    /* opacity: 0; */
     width: 60%;
 }
 
@@ -202,19 +203,27 @@ header img {
     font-weight: bold;
 }
 
+#results-button {
+    width: 1189.2px;
+    display: flex;
+    justify-content: center;
+}
+
 .end-game-button {
     font-size: xx-large;
-    margin-top: 950px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-instructions {
     display: flex;
     flex-direction: row;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .left-instructions {
-    
     width: 594.6px;
     margin: 30px;
     text-align: center;
@@ -239,19 +248,28 @@ header img {
 .main-results {
     display: flex;
     flex-direction: row;
-    font-family: 'Gentium Book Basic', serif;
-    border: 1px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .left-results { 
     width: 594.6px;
     margin: 30px;
     text-align: center;
+    height: 712.2px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* overflow: auto; */
+    
 }
 
+.results-wrap {
+    overflow: auto;
+    width: 450px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+}
 
 .table-title {
     font-weight: bold;
@@ -260,7 +278,7 @@ header img {
 
 th {
     font-weight: bold;
-    border-bottom: 1px black solid;
+    border-bottom: 1px black solid;    
 }
 
 td {
@@ -271,9 +289,10 @@ td {
     width: 594.6px;
     margin: 10px;
     text-align: center;
-
+    height: 712.2px;
     display: flex;
     flex-direction: column;
+    /* overflow: auto; */
 }
 
 .play-again-button {
@@ -281,3 +300,46 @@ td {
 }
 
 
+button {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid rgb(243,182,0);
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+    color:rgb(159, 40, 22)
+}
+
+button:hover {
+    background: rgb(243,182,0);
+    color: white;
+    
+}
+
+#confirm {
+    margin: 20px;
+    /* display: block; */
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.game-settings-wrap {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}

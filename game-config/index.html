@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
     <title>Instructions</title>
 </head>
 
@@ -51,38 +47,39 @@
                 <form>
                     <label>
                     </label>
-                    <div>
-                        <h3>Time</h3>
-                        <label>
-                            1 Minute
-                            <input type="radio" name="time" value="1" required>
-                        </label>
-                        <label>
-                            3 Minutes
-                            <input type="radio" name="time" value="3" required>
-                        </label>
-                        <label>
-                            5 Minutes
-                            <input type="radio" name="time" value="5" required checked>
-                        </label>
-                        <label>
-                            10 minutes
-                            <input type="radio" name="time" value="10" required>
-                        </label>
+                    <div class="game-settings-wrap">
+                        <div class="time-container">
+                            <h3 class="underline">Time</h3>
+                            <label>
+                                1 Minute
+                                <input type="radio" name="time" value="1" required>
+                            </label>
+                            <label>
+                                3 Minutes
+                                <input type="radio" name="time" value="3" required>
+                            </label>
+                            <label>
+                                5 Minutes
+                                <input type="radio" name="time" value="5" required checked>
+                            </label>
+                            <label>
+                                10 minutes
+                                <input type="radio" name="time" value="10" required>
+                            </label>
+                        </div>
+                        <div class="difficulty-container">
+                            <h3 class="underline">Difficulty</h3>
+                            <label>
+                                Baby mode
+                                <input type="radio" name="difficulty" value="baby" required>
+                            </label>
+                            <label>
+                                Normal
+                                <input type="radio" name="difficulty" value="normal" required checked>
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Difficulty</h3>
-                        <label>
-                            Baby mode
-                            <input type="radio" name="difficulty" value="baby" required>
-                        </label>
-                        <label>
-                            Normal
-                            <input type="radio" name="difficulty" value="normal" required checked>
-                        </label>
-
-                    </div>
-                    <button>Confirm Settings</button>
+                    <button id="confirm">Confirm Settings</button>
                 </form>
                 <button id="audio">Care for some Music?</button>
             </div>

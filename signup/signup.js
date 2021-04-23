@@ -1,9 +1,9 @@
 import { logIn, createUser, userExists, correctLogin } from '../local-storage-utils.js';
 
 const signupForm = document.querySelector('#signup-form');
-const signupSection = document.querySelector('.sign-up'); 
+const signupSection = document.querySelector('.left'); 
 const loginForm = document.querySelector('#login-form');
-const loginSection = document.querySelector('.login');
+const loginSection = document.querySelector('.right');
 
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -17,9 +17,14 @@ signupForm.addEventListener('submit', (e) => {
         logIn(username);
         window.location = '../game-config/index.html';
     } else {
-        const div = document.createElement('div');
-        div.textContent = 'User already exists (or you are from the future)';
-        signupSection.append(div);
+        const previousMessage = document.querySelector('.user-message-signup');
+        if (!previousMessage){
+            const div = document.createElement('div');
+            div.classList.add('user-message-signup');
+            div.classList.add('user-message');
+            div.textContent = 'User already exists (or you are from the future)';
+            signupSection.append(div);
+        }
     }
     
 });
@@ -37,9 +42,15 @@ loginForm.addEventListener('submit', (e) => {
         window.location = '../game-config/index.html';
         
     } else {
-        const div = document.createElement('div');
-        div.textContent = 'Incorrect Login Credentials';
-        loginSection.append(div);
+        const previousMessage = document.querySelector('.user-message-login');
+        if (!previousMessage){
+            const div = document.createElement('div');
+            div.classList.add('user-message');
+            div.classList.add('user-message-login');
+            div.textContent = 'Incorrect Login Credentials';
+            loginSection.append(div);
+
+        }
     }
 
 });

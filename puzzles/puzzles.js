@@ -34,6 +34,7 @@ let score = pointTotal(game, correctClicks);
 //Timer Config
 //sourced from: https://jsfiddle.net/wr1ua0db/17/
 //change duration to be equal to the games time property. 5 minutes by default
+game.completeTime = 0;
 let duration = game.time;
 let timer = duration, minutes, seconds;
 let myInterval = setInterval(function () { //eslint-disable-line
@@ -43,7 +44,7 @@ let myInterval = setInterval(function () { //eslint-disable-line
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     display.textContent = minutes + ':' + seconds;
-
+    game.completeTime++;
     //when timer is finished, clears interval and ends game
     if (--timer < 0) {
         doneFunction(game, score);
@@ -60,8 +61,8 @@ puzzle.hiddenObjects.forEach(object => {
 
     //render clues into item list below puzzle image
     const clickyClue = document.createElement('span');
+    clickyClue.innerHTML = '\u00A0';
     clickyClue.textContent = object.clue;
-
     clues.append(clickyClue);
 
     //create clickies div
@@ -107,7 +108,7 @@ puzzle.hiddenObjects.forEach(object => {
         //end game logic
         //disabling clickies and image, add results button to redirect to results page, stop timer, and span appears...somewhere(hidden dani?) hi Dani :)
         //update game state with score --> push to localStorage
-        if (allClickiesFound()) {
+        if (allClickiesFound(game)) {
             doneFunction(game, score);
             clearInterval(myInterval);
         }

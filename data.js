@@ -18,18 +18,18 @@ const cubbies = {
         },
         {
             id: 'jack',
-            clue: 'a small silver jack,',
+            clue: '\u00A0a small silver jack,',
             description: 'a small silver jack',
             image: '../assets/cubbies/jack.png',
             map: {
-                top: '60%',
-                left: '12.7%'
+                top: '59.5%',
+                left: '12.5%'
             }
 
         },
         {
             id: 'pencil',
-            clue: 'a bright yellow pencil,',
+            clue: '\u00A0a bright yellow pencil,',
             description: 'a bright yellow pencil',
             image: '../assets/cubbies/pencil.png',
             map: {
@@ -40,7 +40,7 @@ const cubbies = {
         },
         {
             id: 'arrows',
-            clue: 'two black arrows,',
+            clue: '\u00A0two black arrows,',
             description: 'two black arrows',
             image: '../assets/cubbies/arrows.png',
             map: {
@@ -51,7 +51,7 @@ const cubbies = {
         },
         {
             id: 'puppy',
-            clue: 'a little puppy dog,',
+            clue: '\u00A0a little puppy dog,',
             description: 'a little puppy dog',
             image: '../assets/cubbies/puppy.png',
             map: {
@@ -62,18 +62,18 @@ const cubbies = {
         },
         {
             id: 'ladybug',
-            clue: 'a red ladybug,',
+            clue: '\u00A0a red ladybug,',
             description: 'a red ladybug',
             image: '../assets/cubbies/ladybug.png',
             map: {
-                top: '45.5%',
+                top: '44.5%',
                 left: '55%'
             }
 
         },
         {
             id: 'rug',
-            clue: 'a Persian rug,',
+            clue: '\u00A0a Persian rug,',
             description: 'a Persian rug',
             image: '../assets/cubbies/rug.png',
             map: {
@@ -84,7 +84,7 @@ const cubbies = {
         },
         {
             id: 'icecream',
-            clue: 'an ice cream cone.',
+            clue: '\u00A0and an ice cream cone.',
             description: 'an ice cream cone',
             image: '../assets/cubbies/icecream.png',
             map: {
@@ -107,7 +107,7 @@ const cats = {
     hiddenObjects: [
         {
             id: 'lion',
-            clue: 'a lion,',
+            clue: '\u00A0a lion,',
             description: 'a lion',
             image: '../assets/cats/lion.png',
             map: {
@@ -117,7 +117,7 @@ const cats = {
         },
         {
             id: 'cat3',
-            clue: 'a cat with a bell,',
+            clue: '\u00A0a cat with a bell,',
             description: 'a handsome cat',
             image: '../assets/cats/cat3.png',
             map: {
@@ -128,7 +128,7 @@ const cats = {
         },
         {
             id: 'fish',
-            clue: 'a fish who wears hats,',
+            clue: '\u00A0a fish who wears hats,',
             description: 'a fish wearing a hat',
             image: '../assets/cats/fish.png',
             map: {
@@ -139,7 +139,7 @@ const cats = {
         },
         {
             id: 'shell',
-            clue: 'a seaside shell,',
+            clue: '\u00A0a seaside shell,',
             description: 'a sea shell',
             image: '../assets/cats/shell.png',
             map: {
@@ -151,7 +151,7 @@ const cats = {
 
         {
             id: 'horse',
-            clue: 'a horse that rocks,',
+            clue: '\u00A0a horse that rocks,',
             description: 'rocking horse',
             image: '../assets/cats/horse.png',
             map: {
@@ -162,7 +162,7 @@ const cats = {
         },
         {
             id: 'button',
-            clue: 'a button with a square,',
+            clue: '\u00A0a button with a square,',
             description: 'a button',
             image: '../assets/cats/button.png',
             map: {
@@ -173,7 +173,7 @@ const cats = {
         },
         {
             id: 'cat2',
-            clue: 'a cat that hisses',
+            clue: '\u00A0and a cat that hisses.',
             description: 'a hissing cat',
             image: '../assets/cats/cat2.png',
             map: {
@@ -196,7 +196,7 @@ const whitespace = {
     hiddenObjects: [
         {
             id: 'eagle',
-            clue: 'an eagle,',
+            clue: '\u00A0an eagle,',
             description: 'an eagle',
             image: '../assets/whitespace/eagle.png',
             map: {
@@ -207,7 +207,7 @@ const whitespace = {
         },
         {
             id: 'paperclip',
-            clue: 'a yellow paperclip,',
+            clue: '\u00A0a yellow paperclip,',
             description: 'a yellow paperclip',
             image: '../assets/whitespace/paperclip.png',
             map: {
@@ -218,18 +218,18 @@ const whitespace = {
         },
         {
             id: 'spider',
-            clue: 'a black spider,',
+            clue: `\u00A0a black spider,`,
             description: 'a spider',
             image: '../assets/whitespace/spider.png',
             map: {
-                top: '50%',
-                left: '50%'
+                top: '67.5%',
+                left: '37%',
             }
 
         },
         {
             id: 'shoe',
-            clue: 'a pink baby shoe,',
+            clue: '\u00A0a pink baby shoe, ',
             description: 'a pink shoe',
             image: '../assets/whitespace/shoe.png',
             map: {
@@ -251,7 +251,7 @@ const whitespace = {
         },
         {
             id: 'fish',
-            clue: 'a fish that\'s red,',
+            clue: '\u00A0a fish that\'s red,',
             description: 'a red fish',
             image: '../assets/whitespace/fish.png',
             map: {
@@ -262,7 +262,7 @@ const whitespace = {
         },
         {
             id: 'corn',
-            clue: 'an ear of corn,',
+            clue: '\u00A0an ear of corn,',
             description: 'a corn cob',
             image: '../assets/whitespace/corn.png',
             map: {
@@ -273,7 +273,7 @@ const whitespace = {
         },
         {
             id: 'hat',
-            clue: 'a hat that\'s blue',
+            clue: '\u00A0and a hat that\'s blue.',
             description: 'a blue hat',
             image: '../assets/whitespace/hat.png',
             map: {

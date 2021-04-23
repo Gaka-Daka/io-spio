@@ -1,6 +1,5 @@
 import { updateGame } from '../game-utils.js';
 
-
 const elPuzzle = document.querySelector('#puzzle');
 
 export function pointTotal(game, correctClicks) {

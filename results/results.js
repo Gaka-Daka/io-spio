@@ -11,6 +11,7 @@ const user = getUser();
 const game = getGame();
 user.games.push(game);
 
+
 const button = document.querySelector('#play-again');
 const foundTable = document.querySelector('#found-table');
 const scoreBoard = document.querySelector('#scoreboard');
@@ -25,7 +26,6 @@ for (let gameItem of game.foundObjects) {
         const tr = addTableRow(matchingItem);
         foundTable.append(tr);
     }
-
 }
 
 for (let game of user.games) {
@@ -39,6 +39,7 @@ updateUser(user);
 const allScores = document.querySelectorAll('.scores');
 const mostRecentScore = allScores[allScores.length - 1];
 mostRecentScore.classList.add('last-score');
+
 button.addEventListener('click', () => {
     localStorage.removeItem('GAME');
     window.location = '../game-config/index.html';

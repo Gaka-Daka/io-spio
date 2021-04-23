@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
     <title>Instructions</title>
 </head>
 
@@ -22,14 +18,16 @@
     </header>
     <main class="main-results">
         <section class="left-results">
-            <table id="found-table">
-                <h3 class="table-title">Final Results</h3>
-                <thead>
-                    <th>Found Objects</th>
-                    <th>Description</th>
-                </thead>
-                <!-- render found items dynamically -->
+            <h3 class="table-title">Final Results</h3>
+            <div class="results-wrap">
+                <table id="found-table">
+                    <thead>
+                        <th>Found Objects</th>
+                        <th>Description</th>
+                    </thead>
+                    <!-- render found items dynamically -->
             </table>
+            </div>
         </section>
 
         <section class="right-results">
@@ -39,6 +37,7 @@
                     <th>Username</th>
                     <th>Map</th>
                     <th>Difficulty</th>
+                    <th>Time</th>
                     <th>Score</th>
                 </thead>
                 <!-- render scoreboard dynamically based on users -->

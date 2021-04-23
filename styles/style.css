@@ -145,8 +145,8 @@ header img {
     justify-content: center;
     align-items: center;
     width: 1189.2px;
-    margin: -20px ;
-    padding: 0;
+    margin: -50px ;
+    padding-top: 80px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     font-weight: bolder;
@@ -169,9 +169,10 @@ header img {
 }
 
 #item-list {
-    margin:0;
-    padding: 0;
-    font-size: 20px;;
+    margin-top: -20px;
+    padding: 0px;
+    font-size: 25px;;
+    text-align: center;
     width: 1189.2px;
     display: inline;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -211,7 +212,6 @@ header img {
 .end-game-button {
     font-size: xx-large;
     position: absolute;
-    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,10 +293,9 @@ td {
 
 
 button {
-    
     background-color: white;
     border-radius: 15px;
-    padding: 15px;
+    padding: 5px;
     border: 2px solid rgb(243,182,0);
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;

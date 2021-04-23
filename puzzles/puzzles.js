@@ -60,8 +60,8 @@ puzzle.hiddenObjects.forEach(object => {
 
     //render clues into item list below puzzle image
     const clickyClue = document.createElement('span');
+    clickyClue.innerHTML = '\u00A0';
     clickyClue.textContent = object.clue;
-
     clues.append(clickyClue);
 
     //create clickies div

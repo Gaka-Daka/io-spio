@@ -14,10 +14,10 @@ const kalanDescript = document.getElementById('kalan-description');
 const danDescript = document.getElementById('daniella-description');
 const gabDescript = document.getElementById('gabriel-description');
 
-const kalClue = document.getElementById('kal-clue')
-const katClue = document.getElementById('kat-clue')
-const danClue = document.getElementById('dan-clue')
-const gabClue = document.getElementById('gab-clue')
+const kalClue = document.getElementById('kal-clue');
+const katClue = document.getElementById('kat-clue');
+const danClue = document.getElementById('dan-clue');
+const gabClue = document.getElementById('gab-clue');
 
 kat.addEventListener('click', () => {
     kat.classList.add('drop-shadow');

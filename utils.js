@@ -102,7 +102,9 @@ export function renderGuest() {
     header.append(divHeader);
 }
 
+// very readable argument name
 export function displayTime(timeAsSec) {
+    // nice parsing!
     let minutes = Math.floor(timeAsSec / 60);
     let seconds = Math.floor(timeAsSec % 60);
 
@@ -112,6 +114,6 @@ export function displayTime(timeAsSec) {
     if (seconds < 10){
         seconds = '0' + seconds;
     }
-    const timeDisplay = minutes + ':' + seconds; 
+    const timeDisplay = `${minutes} : ${seconds}`; 
     return timeDisplay;
 }

@@ -1,3 +1,5 @@
+// this file got a big big--I feel like you could have moved even more of this work into separate functions/files for maintainability
+
 import { findById, displayTime } from '../utils.js';
 import { puzzles } from '../data.js';
 import { createGame, getGame } from '../game-utils.js';
@@ -16,16 +18,14 @@ const currentScore = document.getElementById('score');
 const display = document.querySelector('#time');
 
 //change game to get game because we created it in the config page
-let game = getGame();
 // if no game exists because the user did not select settings and create a game, create a game. Will have default settings.
-if (!game) {
-    game = createGame();
-}
+const game = getGame() || createGame();
 
 //add puzzle id to game object so it can be referenced on results page 
 game.puzzle = puzzle.id;
 elPuzzle.style.backgroundImage = `url(${puzzle.image}`;
 
+// so much state managemnt! nice work juggling all this complexity
 //intialize score/click state
 let correctClicks = 0;
 let score = pointTotal(game, correctClicks);
@@ -35,11 +35,9 @@ let score = pointTotal(game, correctClicks);
 game.completeTime = 0;
 //initialize game objects complete time property so we can reference it when rendering results results. It will track every second elapsed after starting the timer.
 let duration = game.time;
-
-
    
 //start an interval that will display the seconds passed into it as minutes and seconds.
-let myInterval = setInterval(function() {  
+const myInterval = setInterval(() => {  
 
     const timeDisplay = displayTime(duration);
     //turn the duration into a string of minutes and seconds
@@ -87,6 +85,7 @@ puzzle.hiddenObjects.forEach(object => {
     clickyDiv.classList.add('clicky');
 
     //default is normal, BUT if baby difficulty is selected, add baby properties
+    // again, these difficulties should probably live in consts to prevent typos
     if (game.difficulty === 'baby') {
         clickyDiv.classList.add('baby');
     }
@@ -95,6 +94,7 @@ puzzle.hiddenObjects.forEach(object => {
     clickyDiv.addEventListener('click', () => {
 
         //matching 'localStorage' data to whatever clicky is selected (current object from data - on line 55)
+        // is matchingIds an array? if not, seems like it should lose the `s`
         const matchingIds = findById(game.foundObjects, object.id);
 
         //change hasBeenFound in 'localStorage' property to true
@@ -117,6 +117,7 @@ puzzle.hiddenObjects.forEach(object => {
         //update game state with score --> push to localStorage
         if (allClickiesFound(game)) {
             doneFunction(game, score);
+            // nice work! clearInterval can be tough to implement
             clearInterval(myInterval);
         }
     });

@@ -66,6 +66,7 @@ function prevSong() {
         songIndex = songs.length - 1;
     }
 
+    // very concise line of code here!
     loadSong(songs[songIndex]);
 
     playSong();

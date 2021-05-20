@@ -41,12 +41,10 @@ export function addResultTableRow(user, game) {
     
     const tdCompleteTime = document.createElement('td');
     //check if the complete time is greater than or equal to total time alloted for a puzzle. If it is return incomplete instead of a time
-    if (game.completeTime >= game.time) {
-        
-        tdCompleteTime.textContent = 'Incomplete';
-    } else {
-        tdCompleteTime.textContent = completeTime;
-    }
+
+    tdCompleteTime.textContent = game.completeTime >= game.time 
+        ? 'Incomplete' 
+        : completeTime;
     
 
    

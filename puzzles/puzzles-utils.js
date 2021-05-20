@@ -3,10 +3,12 @@ import { updateGame } from '../game-utils.js';
 const elPuzzle = document.querySelector('#puzzle');
 
 export function pointTotal(game, correctClicks) {
+    // i'd like to see some consts here to explain what 110 means, for example. that will make it easier for future devs to maintain this code
     let score = (correctClicks * 110) - (game.misclicks * 10);
     return score;
 }
 
+// this could use a better name
 export function doneFunction(game, score) {
     const endGameSpan = document.createElement('span');
     const resultsButton = document.querySelector('#results-button');
@@ -34,7 +36,7 @@ export function doneFunction(game, score) {
 export function allClickiesFound(game) {
 
     for (let foundObject of game.foundObjects) {
-        if (foundObject.hasBeenFound !== true) {
+        if (!foundObject.hasBeenFound) {
             return false;
         }
     }

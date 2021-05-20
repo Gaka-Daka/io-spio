@@ -20,7 +20,7 @@ const hiddenObjects = currentPuzzle.hiddenObjects;
 for (let gameItem of game.foundObjects) {
     const matchingItem = findById(hiddenObjects, gameItem.id);
 
-    if (gameItem.hasBeenFound === true) {
+    if (gameItem.hasBeenFound) {
 
         const tr = addTableRow(matchingItem);
         foundTable.append(tr);
@@ -35,8 +35,8 @@ for (let game of user.games) {
 updateUser(user);
 
 
-const allScores = document.querySelectorAll('.scores');
-const mostRecentScore = allScores[allScores.length - 1];
+const allScoreEls = document.querySelectorAll('.scores');
+const mostRecentScore = allScoreEls[allScoreEls.length - 1];
 mostRecentScore.classList.add('last-score');
 localStorage.removeItem('GAME');
 button.addEventListener('click', () => {

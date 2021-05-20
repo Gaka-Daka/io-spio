@@ -51,7 +51,7 @@ export function logout() {
     localStorage.setItem(LOGGED_IN, null);
 }
 
-
+// very cool function! it's nice that it's impure and can be called from anywhere
 export function checkIfAUserIsLoggedIn() {
     const logged_in = localStorage.getItem('LOGGED_IN');
 

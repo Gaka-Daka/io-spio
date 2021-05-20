@@ -43,6 +43,7 @@ loginForm.addEventListener('submit', (e) => {
         
     } else {
         const previousMessage = document.querySelector('.user-message-login');
+        // some complex logic here! nice work wangling these possible user paths using inferences from the DOM
         if (!previousMessage){
             const div = document.createElement('div');
             div.classList.add('user-message');
